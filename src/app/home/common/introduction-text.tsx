@@ -27,7 +27,7 @@ const IntroductionText: FunctionComponent = () => {
       </Typography.Paragraph>
       <Typography.Paragraph>
         I&apos;ll be sharing my journey, some of my personal projects and publishing articles
-        about topics that interest me and things I&apos;ve learned throughout my career
+        about topics that interest me and things I&apos;ve learned throughout my career.
       </Typography.Paragraph>
     </div>
   );
