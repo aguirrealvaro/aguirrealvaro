@@ -49,6 +49,10 @@ module.exports = {
       transitionProperty: {
         spacing: "margin, padding",
       },
+      zIndex: {
+        "heart-like": 1,
+        navbar: 2,
+      },
     },
   },
   plugins: [],

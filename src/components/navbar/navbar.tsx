@@ -32,7 +32,7 @@ const Navbar: FunctionComponent = () => {
     <header
       ref={containerRef}
       className={cn(
-        "fixed inset-x-0 top-0 z-10 h-20 bg-bg-secondary shadow",
+        "fixed inset-x-0 top-0 z-navbar h-20 bg-bg-secondary shadow",
         "flex items-center"
       )}
     >

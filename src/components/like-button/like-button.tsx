@@ -12,7 +12,7 @@ const LikeButton: FunctionComponent<LikeButtonProps> = ({
   ...restProps
 }) => {
   return (
-    <div className="relative inline-flex">
+    <div className="relative z-heart-like inline-flex">
       <button type="button" {...restProps}>
         <Heart fill={isActive ? "red" : "transparent"} color="red" />
       </button>
