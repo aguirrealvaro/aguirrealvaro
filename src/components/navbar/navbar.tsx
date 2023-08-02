@@ -31,7 +31,10 @@ const Navbar: FunctionComponent = () => {
   return (
     <header
       ref={containerRef}
-      className={cn("fixed inset-x-0 top-0 h-20 bg-bg-secondary shadow", "flex items-center")}
+      className={cn(
+        "fixed inset-x-0 top-0 z-10 h-20 bg-bg-secondary shadow",
+        "flex items-center"
+      )}
     >
       <Wrapper className="h-full">
         <div className="flex h-full items-center justify-between">
