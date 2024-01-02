@@ -4,13 +4,15 @@ import { useTheme } from "next-themes";
 import { Icon, IconButton } from "@/components/ui";
 
 const ThemeToggle: FunctionComponent = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+
+  const isLightTheme = resolvedTheme === "light";
 
   const handleToggle = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(isLightTheme ? "dark" : "light");
   };
 
-  const icon = theme === "light" ? Sun : Moon;
+  const icon = isLightTheme ? Moon : Sun;
 
   return (
     <IconButton onClick={handleToggle}>
