@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -34,12 +35,12 @@ module.exports = {
       },
       keyframes: {
         "fade-in": {
-          from: { opacity: 0 },
-          to: { opacity: 1 },
+          from: { opacity: "0" },
+          to: { opacity: "1" },
         },
         "fade-out": {
-          from: { opacity: 1 },
-          to: { opacity: 0 },
+          from: { opacity: "1" },
+          to: { opacity: "0" },
         },
       },
       animation: {
@@ -50,10 +51,12 @@ module.exports = {
         spacing: "margin, padding",
       },
       zIndex: {
-        "heart-like": 1,
-        navbar: 2,
+        "heart-like": "1",
+        navbar: "2",
       },
     },
   },
   plugins: [],
 };
+
+export default config;

@@ -12,7 +12,7 @@ const ThemeToggle: FunctionComponent = () => {
     setTheme(isLightTheme ? "dark" : "light");
   };
 
-  const icon = isLightTheme ? Moon : Sun;
+  const icon = isLightTheme ? Sun : Moon;
 
   return (
     <IconButton onClick={handleToggle}>
