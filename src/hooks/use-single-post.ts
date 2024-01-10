@@ -21,16 +21,16 @@ const useSinglePost = (slug: string): UseSinglePostReturnType => {
     enabled: false,
   });
 
+  useMutation({});
+
   // Increment View
-  const { mutate: incrementViewMutation, isLoading: isFetchingView } = useMutation(
-    incrementView,
-    {
-      onSuccess: () => {
-        getSinglePostQuery.refetch();
-        queryClient.invalidateQueries({ queryKey: ["posts"] });
-      },
-    }
-  );
+  const { mutate: incrementViewMutation, isPending: isIncrementingView } = useMutation({
+    mutationFn: incrementView,
+    onSuccess: () => {
+      getSinglePostQuery.refetch();
+      queryClient.invalidateQueries({ queryKey: ["posts"] });
+    },
+  });
 
   useEffect(() => {
     incrementViewMutation(slug);
@@ -45,15 +45,16 @@ const useSinglePost = (slug: string): UseSinglePostReturnType => {
   const userHasLiked = userHasLikedQuery.data || false;
 
   // Like Post
-  const likePostMutation = useMutation(likePost, {
+  const likePostMutation = useMutation({
+    mutationFn: likePost,
     onSuccess: () => {
       getSinglePostQuery.refetch();
       queryClient.invalidateQueries({ queryKey: ["user-has-liked", slug] });
     },
   });
 
-  const isFetchingPost = isFetchingView || getSinglePostQuery.isFetching;
-  const isFetchingLike = likePostMutation.isLoading || userHasLikedQuery.isFetching;
+  const isFetchingPost = isIncrementingView || getSinglePostQuery.isFetching;
+  const isFetchingLike = likePostMutation.isPending || userHasLikedQuery.isFetching;
 
   return {
     post: getSinglePostQuery.data,
