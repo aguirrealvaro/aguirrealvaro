@@ -1,4 +1,4 @@
-import { ContactButtons, IntroductionText } from "./common";
+import { ContactButtons, IntroductionText } from "./components";
 import { PageContainer, PostsList, Wrapper } from "@/components";
 import { Typography } from "@/components/ui";
 

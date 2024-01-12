@@ -1,4 +1,4 @@
-import { PostWrapper } from "./common/post-wrapper";
+import { PostWrapper } from "./components";
 import { PageContainer, Wrapper } from "@/components";
 import { allPosts } from "contentlayer/generated";
 

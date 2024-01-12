@@ -1,4 +1,4 @@
-import { Item } from "./common";
+import { Item } from "./components";
 import { PageContainer, Wrapper } from "@/components";
 import { Typography, Separator } from "@/components/ui";
 
