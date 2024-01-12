@@ -45,6 +45,15 @@ const MainMenu: FunctionComponent = () => {
         {NAVIGATION_LINKS.map(({ name, href, externalHref }, index) => {
           const isActive = pathname === href;
 
+          const commonProps = {
+            onMouseEnter: () => setActiveElement(index),
+            ref: (el: HTMLAnchorElement) => {
+              if (el) {
+                linksRef.current[index] = el;
+              }
+            },
+          };
+
           return (
             <li
               key={index}
@@ -58,12 +67,7 @@ const MainMenu: FunctionComponent = () => {
                   href={externalHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  ref={(el) => {
-                    if (el) {
-                      linksRef.current[index] = el;
-                    }
-                  }}
-                  onMouseEnter={() => setActiveElement(index)}
+                  {...commonProps}
                   className="-mb-0.5 px-4 py-2 transition"
                 >
                   {name}
@@ -71,12 +75,7 @@ const MainMenu: FunctionComponent = () => {
               ) : (
                 <Link
                   href={href || ""}
-                  ref={(el) => {
-                    if (el) {
-                      linksRef.current[index] = el;
-                    }
-                  }}
-                  onMouseEnter={() => setActiveElement(index)}
+                  {...commonProps}
                   className={cn(
                     "-mb-0.5 px-4 py-2 transition",
                     isActive ? "text-text-heading" : ""
