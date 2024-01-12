@@ -41,7 +41,7 @@ const PostsList = () => {
                 {renderMetric(relatedPost?.likes.length)} likes
               </span>
               <span className={cn("flex items-center", linkVariants())}>
-                Read More
+                Read Post
                 <ArrowRight size={15} className="ml-2 transition-spacing group-hover:ml-3" />
               </span>
             </Link>
