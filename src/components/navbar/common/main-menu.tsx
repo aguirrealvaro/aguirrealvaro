@@ -1,7 +1,7 @@
 import { FunctionComponent, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAVIGATION_LINKS } from "@/constants";
+import { NAVIGATION_LINKS } from "@/config";
 import { cn } from "@/utils/cn";
 
 const MainMenu: FunctionComponent = () => {

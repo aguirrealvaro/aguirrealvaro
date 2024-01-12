@@ -1,6 +1,6 @@
 import { FunctionComponent, HTMLAttributes } from "react";
 import { useRouter } from "next/navigation";
-import { NAVIGATION_LINKS } from "@/constants";
+import { NAVIGATION_LINKS } from "@/config";
 import { useKeyPress } from "@/hooks";
 import { cn } from "@/utils/cn";
 
