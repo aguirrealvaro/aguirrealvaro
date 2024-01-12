@@ -47,7 +47,7 @@ const MainMenu: FunctionComponent = () => {
 
           const commonProps = {
             onMouseEnter: () => setActiveElement(index),
-            ref: (el: HTMLAnchorElement) => {
+            ref: (el: HTMLAnchorElement | null) => {
               if (el) {
                 linksRef.current[index] = el;
               }

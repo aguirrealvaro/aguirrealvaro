@@ -7,6 +7,7 @@ Deployed to Vercel & PlanetScale
 
 ### Backlog:
 
+- move medialinks to home? add email
 - remove classes on disabled state for button, iconbutton
 - icon hydration
 - cached response
