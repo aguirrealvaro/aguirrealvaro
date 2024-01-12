@@ -7,8 +7,8 @@ type ItemProps = {
   image: string;
   company: string;
   fromDate: string;
-  toDate: string;
-  description?: string;
+  toDate?: string;
+  description: string;
   subItems?: ItemProps[];
   isSubItem?: boolean;
 };
@@ -23,7 +23,7 @@ const Item = ({
   isSubItem = false,
 }: ItemProps) => {
   const parsedFromDate = formatDate(fromDate, { showDay: false });
-  const parsedToDate = formatDate(toDate, { showDay: false });
+  const parsedToDate = toDate ? formatDate(toDate, { showDay: false }) : "";
 
   return (
     <div className={cn("flex-1", isSubItem ? "ml-8 mt-4" : "")}>
@@ -39,7 +39,11 @@ const Item = ({
           <Typography.H4>{company}</Typography.H4>
           <span className="text-text-secondary">
             <time dateTime={parsedFromDate.dateString}>{parsedFromDate.formattedDate}</time> -{" "}
-            <time dateTime={parsedToDate.dateString}>{parsedToDate.formattedDate}</time>
+            {parsedToDate ? (
+              <time dateTime={parsedToDate.dateString}>{parsedToDate.formattedDate}</time>
+            ) : (
+              <span>Present</span>
+            )}
           </span>
           {description && <Typography.Paragraph>{description}</Typography.Paragraph>}
         </div>

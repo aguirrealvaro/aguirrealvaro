@@ -8,7 +8,14 @@ const Career = () => {
       <Wrapper>
         <div className="flex flex-col gap-12">
           <section>
-            <Typography.H3 className="mb-4">Experience</Typography.H3>
+            <Typography.H3 className="mb-4">Work Experience</Typography.H3>
+            <Item
+              image="/trafilea.jpg"
+              company="Trafilea"
+              fromDate="2023-07-15"
+              description="Currently working"
+            />
+            <Separator />
             <Item
               image="/phinxlab.jpg"
               company="Phinx Lab"
