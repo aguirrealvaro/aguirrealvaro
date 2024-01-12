@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { NAVIGATION_LINKS } from "@/config";
 import { useKeyPress } from "@/hooks";
 import { cn } from "@/utils/cn";
+import { getIsExternalLink } from "@/utils/get-is-external-link";
 
 type MobileMenuProps = {
   isMobileMenuOpen: boolean;
@@ -42,10 +43,12 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
     >
       <nav className="mb-4">
         <ul className="flex flex-col gap-4">
-          {NAVIGATION_LINKS.map(({ name, href, externalHref }, index) => {
-            return (
-              <li key={index} className="text-center">
-                {externalHref ? (
+          {NAVIGATION_LINKS.map((link, index) => {
+            const renderLink = () => {
+              if (getIsExternalLink(link)) {
+                const { name, externalHref } = link;
+
+                return (
                   <a
                     href={externalHref}
                     target="_blank"
@@ -54,14 +57,24 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
                   >
                     {name}
                   </a>
-                ) : (
+                );
+              } else {
+                const { name, href } = link;
+
+                return (
                   <button
-                    onClick={() => handleClick(href || "")}
+                    onClick={() => handleClick(href)}
                     className="rounded p-1.5 transition hover:bg-hover-primary"
                   >
                     {name}
                   </button>
-                )}
+                );
+              }
+            };
+
+            return (
+              <li key={index} className="text-center">
+                {renderLink()}
               </li>
             );
           })}

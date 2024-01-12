@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAVIGATION_LINKS } from "@/config";
 import { cn } from "@/utils/cn";
+import { getIsExternalLink } from "@/utils/get-is-external-link";
 
 const MainMenu: FunctionComponent = () => {
   const pathname = usePathname();
@@ -42,8 +43,8 @@ const MainMenu: FunctionComponent = () => {
             left: `${siblingSizes?.left}px`,
           }}
         />
-        {NAVIGATION_LINKS.map(({ name, href, externalHref }, index) => {
-          const isActive = pathname === href;
+        {NAVIGATION_LINKS.map((link, index) => {
+          const isActive = pathname === link.href;
 
           const commonProps = {
             onMouseEnter: () => setActiveElement(index),
@@ -54,6 +55,39 @@ const MainMenu: FunctionComponent = () => {
             },
           };
 
+          const renderLink = () => {
+            if (getIsExternalLink(link)) {
+              const { name, externalHref } = link;
+
+              return (
+                <a
+                  href={externalHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="-mb-0.5 px-4 py-2 transition"
+                  {...commonProps}
+                >
+                  {name}
+                </a>
+              );
+            } else {
+              const { name, href } = link;
+
+              return (
+                <Link
+                  href={href}
+                  className={cn(
+                    "-mb-0.5 px-4 py-2 transition",
+                    isActive ? "text-text-heading" : ""
+                  )}
+                  {...commonProps}
+                >
+                  {name}
+                </Link>
+              );
+            }
+          };
+
           return (
             <li
               key={index}
@@ -62,28 +96,7 @@ const MainMenu: FunctionComponent = () => {
                 isActive ? "border-sky-500" : ""
               )}
             >
-              {externalHref ? (
-                <a
-                  href={externalHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  {...commonProps}
-                  className="-mb-0.5 px-4 py-2 transition"
-                >
-                  {name}
-                </a>
-              ) : (
-                <Link
-                  href={href || ""}
-                  {...commonProps}
-                  className={cn(
-                    "-mb-0.5 px-4 py-2 transition",
-                    isActive ? "text-text-heading" : ""
-                  )}
-                >
-                  {name}
-                </Link>
-              )}
+              {renderLink()}
             </li>
           );
         })}

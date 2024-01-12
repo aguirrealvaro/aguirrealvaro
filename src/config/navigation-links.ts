@@ -4,13 +4,13 @@ type InnerNavigationLink = {
   externalHref?: never;
 };
 
-type OuterNavigationLink = {
+export type OuterNavigationLink = {
   name: string;
   href?: never;
   externalHref: string;
 };
 
-type NavigationLink = InnerNavigationLink | OuterNavigationLink;
+export type NavigationLink = InnerNavigationLink | OuterNavigationLink;
 
 export const NAVIGATION_LINKS: NavigationLink[] = [
   { name: "Home", href: "/" },
