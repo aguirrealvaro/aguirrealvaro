@@ -7,7 +7,7 @@ type SingleProjectType = {
   description: string;
   image: string;
   projectLink: string;
-  codeLink?: string;
+  codeLink: string;
   imgClassname?: string;
 };
 
@@ -43,16 +43,14 @@ const SingleProject = ({
         >
           View Project
         </a>
-        {codeLink && (
-          <a
-            href={codeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(buttonVariants({ variant: "outlined" }))}
-          >
-            View Source Code
-          </a>
-        )}
+        <a
+          href={codeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn(buttonVariants({ variant: "outlined" }))}
+        >
+          View Source Code
+        </a>
       </div>
     </div>
   );
