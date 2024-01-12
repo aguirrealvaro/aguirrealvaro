@@ -42,8 +42,10 @@ const MainMenu: FunctionComponent = () => {
             left: `${siblingSizes?.left}px`,
           }}
         />
-        {NAVIGATION_LINKS.map(({ name, href }, index) => {
+        {NAVIGATION_LINKS.map(({ name, href, externalHref }, index) => {
           const isActive = pathname === href;
+
+          const isExternalLink = Boolean(externalHref);
 
           return (
             <li
@@ -53,21 +55,38 @@ const MainMenu: FunctionComponent = () => {
                 isActive ? "border-sky-500" : ""
               )}
             >
-              <Link
-                href={href}
-                ref={(el) => {
-                  if (el) {
-                    linksRef.current[index] = el;
-                  }
-                }}
-                onMouseEnter={() => setActiveElement(index)}
-                className={cn(
-                  "-mb-0.5 px-4 py-2 transition",
-                  isActive ? "text-text-heading" : ""
-                )}
-              >
-                {name}
-              </Link>
+              {isExternalLink ? (
+                <a
+                  href={externalHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ref={(el) => {
+                    if (el) {
+                      linksRef.current[index] = el;
+                    }
+                  }}
+                  onMouseEnter={() => setActiveElement(index)}
+                  className="-mb-0.5 px-4 py-2 transition"
+                >
+                  {name}
+                </a>
+              ) : (
+                <Link
+                  href={href || ""}
+                  ref={(el) => {
+                    if (el) {
+                      linksRef.current[index] = el;
+                    }
+                  }}
+                  onMouseEnter={() => setActiveElement(index)}
+                  className={cn(
+                    "-mb-0.5 px-4 py-2 transition",
+                    isActive ? "text-text-heading" : ""
+                  )}
+                >
+                  {name}
+                </Link>
+              )}
             </li>
           );
         })}
