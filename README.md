@@ -8,10 +8,8 @@ Deployed to Vercel & PlanetScale
 ### Backlog:
 
 - remove classes on disabled state for button, iconbutton
-- cn eslint
-- font flashing on development
 - icon hydration
-- old response
+- cached response
 
 ### Posts:
 
