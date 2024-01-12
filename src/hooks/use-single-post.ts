@@ -21,8 +21,6 @@ const useSinglePost = (slug: string): UseSinglePostReturnType => {
     enabled: false,
   });
 
-  useMutation({});
-
   // Increment View
   const { mutate: incrementViewMutation, isPending: isIncrementingView } = useMutation({
     mutationFn: incrementView,
