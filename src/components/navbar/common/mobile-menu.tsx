@@ -46,7 +46,7 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
             return (
               <li key={index} className="text-center">
                 <button
-                  onClick={() => handleClick(href)}
+                  onClick={() => handleClick(href || "")}
                   className="rounded p-1.5 transition hover:bg-hover-primary"
                 >
                   {name}
