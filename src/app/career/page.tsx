@@ -3,7 +3,7 @@ import { Item } from "./common";
 import { PageContainer, Wrapper } from "@/components";
 import { Typography, Separator } from "@/components/ui";
 
-const Trajectory: FunctionComponent = () => {
+const Career: FunctionComponent = () => {
   return (
     <PageContainer>
       <Wrapper>
@@ -21,7 +21,7 @@ const Trajectory: FunctionComponent = () => {
                   company: "Team Lead at Blockfi",
                   fromDate: "2021-02-01",
                   toDate: "2022-12-01",
-                  image: "/blockfi2.png",
+                  image: "/blockfi.png",
                   description:
                     "I led a small team in the development of Trading, performing frontend tasks and launching high-impact features on the web app. I contributed to the success of the product, resulting in a significant improvement in the user experience and an increase in user engagement.",
                 },
@@ -29,7 +29,7 @@ const Trajectory: FunctionComponent = () => {
                   company: "Frontend Developer at Blockfi",
                   fromDate: "2020-01-01",
                   toDate: "2021-02-01",
-                  image: "/blockfi2.png",
+                  image: "/blockfi.png",
                   description:
                     "As a junior front-end developer, I was involved in the reconstruction of the Trading product.",
                 },
@@ -68,4 +68,4 @@ const Trajectory: FunctionComponent = () => {
   );
 };
 
-export default Trajectory;
+export default Career;

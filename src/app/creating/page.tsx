@@ -3,11 +3,11 @@ import { SingleProject } from "./common";
 import { PageContainer, Wrapper } from "@/components";
 import { Typography } from "@/components/ui";
 
-const Projects: FunctionComponent = () => {
+const Creating: FunctionComponent = () => {
   return (
     <PageContainer>
       <Wrapper>
-        <Typography.H3 className="mb-2">Projects</Typography.H3>
+        <Typography.H3 className="mb-2">Creating</Typography.H3>
         <span className="mb-8 inline-block text-text-secondary">
           Some of the side projects I&apos;m currently working on:
         </span>
@@ -23,22 +23,15 @@ const Projects: FunctionComponent = () => {
           <SingleProject
             title="aguirrealvaro.dev"
             description="My personal website and blog. With a visit counter and a like button for each post."
-            image="/aa2.jpg"
+            image="/aa.jpg"
             projectLink="https://www.aguirrealvaro.dev/"
             codeLink="https://github.com/aguirrealvaro/aguirrealvaro"
             imgClassname="object-contain bg-black"
           />
-          {/* <SingleProject
-            title="Estudio AGR"
-            description="Web page of a real estate company"
-            image="/agr.jpeg"
-            projectLink="https://www.estudioagr.com/"
-            imgClassname="object-contain bg-white"
-          /> */}
         </div>
       </Wrapper>
     </PageContainer>
   );
 };
 
-export default Projects;
+export default Creating;

@@ -14,8 +14,8 @@ export type NavigationLink = InnerNavigationLink | OuterNavigationLink;
 
 export const NAVIGATION_LINKS: NavigationLink[] = [
   { name: "Home", href: "/" },
-  { name: "Trajectory", href: "/trajectory" },
+  { name: "Career", href: "/career" },
   { name: "Blog", href: "/blog" },
-  { name: "Projects", href: "/projects" },
+  { name: "Creating", href: "/creating" },
   { name: "Resume", externalHref: "https://cv.aguirrealvaro.vercel.app" },
 ];
