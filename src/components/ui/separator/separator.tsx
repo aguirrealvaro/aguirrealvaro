@@ -1,6 +1,4 @@
-import { FunctionComponent } from "react";
-
-const Separator: FunctionComponent = () => {
+const Separator = () => {
   return <div role="separator" className="my-4 h-px bg-border-primary" />;
 };
 

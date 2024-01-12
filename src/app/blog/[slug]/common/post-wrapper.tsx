@@ -1,6 +1,5 @@
 "use client";
 
-import { FunctionComponent } from "react";
 import { PostHeader, PostContent } from ".";
 import { useSinglePost } from "@/hooks";
 import { allPosts } from "contentlayer/generated";
@@ -9,7 +8,7 @@ type PostWrapperProps = {
   slug: string;
 };
 
-const PostWrapper: FunctionComponent<PostWrapperProps> = ({ slug }) => {
+const PostWrapper = ({ slug }: PostWrapperProps) => {
   const {
     post: relatedPost,
     isFetchingPost,

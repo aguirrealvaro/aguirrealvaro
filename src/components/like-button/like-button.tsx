@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FunctionComponent } from "react";
+import { ButtonHTMLAttributes } from "react";
 import { Heart } from "lucide-react";
 
 type LikeButtonProps = {
@@ -6,11 +6,7 @@ type LikeButtonProps = {
   isFetching: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-const LikeButton: FunctionComponent<LikeButtonProps> = ({
-  isActive,
-  isFetching,
-  ...restProps
-}) => {
+const LikeButton = ({ isActive, isFetching, ...restProps }: LikeButtonProps) => {
   return (
     <div className="relative z-heart-like inline-flex">
       <button type="button" {...restProps}>

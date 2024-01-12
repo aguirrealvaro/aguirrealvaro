@@ -1,4 +1,4 @@
-import { FunctionComponent, HTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
 import { useRouter } from "next/navigation";
 import { NAVIGATION_LINKS } from "@/config";
 import { useKeyPress } from "@/hooks";
@@ -12,12 +12,12 @@ type MobileMenuProps = {
   isUnmounting: boolean;
 } & HTMLAttributes<HTMLDivElement>;
 
-const MobileMenu: FunctionComponent<MobileMenuProps> = ({
+const MobileMenu = ({
   isMobileMenuOpen,
   navbarHeight,
   closeMobileMenu,
   isUnmounting,
-}) => {
+}: MobileMenuProps) => {
   const router = useRouter();
 
   useKeyPress({

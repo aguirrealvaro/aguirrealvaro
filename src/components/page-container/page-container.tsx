@@ -1,10 +1,10 @@
-import { FunctionComponent, ReactNode } from "react";
+import { ReactNode } from "react";
 
 type PageContainerProps = {
   children: ReactNode;
 };
 
-const PageContainer: FunctionComponent<PageContainerProps> = ({ children }) => {
+const PageContainer = ({ children }: PageContainerProps) => {
   return <div className="mb-8 mt-28">{children}</div>;
 };
 

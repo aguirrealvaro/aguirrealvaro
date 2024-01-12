@@ -1,9 +1,8 @@
-import { FunctionComponent } from "react";
 import { SingleProject } from "./common";
 import { PageContainer, Wrapper } from "@/components";
 import { Typography } from "@/components/ui";
 
-const Creating: FunctionComponent = () => {
+const Creating = () => {
   return (
     <PageContainer>
       <Wrapper>

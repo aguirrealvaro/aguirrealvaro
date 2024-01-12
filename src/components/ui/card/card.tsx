@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from "react";
+import { ReactNode } from "react";
 import { cn } from "@/utils/cn";
 
 type CardProps = {
@@ -6,7 +6,7 @@ type CardProps = {
   className: string;
 };
 
-const Card: FunctionComponent<CardProps> = ({ children, className }) => {
+const Card = ({ children, className }: CardProps) => {
   return <div className={cn("rounded bg-bg-secondary p-4", className)}>{children}</div>;
 };
 

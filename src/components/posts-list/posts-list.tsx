@@ -1,6 +1,5 @@
 "use client";
 
-import { FunctionComponent } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { linkVariants } from "@/components/ui/link";
@@ -9,7 +8,7 @@ import { cn } from "@/utils/cn";
 import { formatDate } from "@/utils/format-date";
 import { allPosts } from "contentlayer/generated";
 
-const PostsList: FunctionComponent = () => {
+const PostsList = () => {
   const sortedPosts = allPosts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
   const { posts, isFetching } = usePosts();

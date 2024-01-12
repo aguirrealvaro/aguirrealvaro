@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from "react";
+import { ReactNode } from "react";
 import { cn } from "@/utils/cn";
 
 type BoldProps = {
@@ -6,7 +6,7 @@ type BoldProps = {
   className?: string;
 };
 
-const Bold: FunctionComponent<BoldProps> = ({ children, className }) => {
+const Bold = ({ children, className }: BoldProps) => {
   return <strong className={cn("font-semibold", className)}>{children}</strong>;
 };
 

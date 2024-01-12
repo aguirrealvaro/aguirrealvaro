@@ -1,13 +1,13 @@
 "use client";
 
-import { FunctionComponent, ReactNode } from "react";
+import { ReactNode } from "react";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 
 type ThemeProviderProps = {
   children: ReactNode;
 };
 
-const ThemeProvider: FunctionComponent<ThemeProviderProps> = ({ children }) => {
+const ThemeProvider = ({ children }: ThemeProviderProps) => {
   return (
     <NextThemeProvider attribute="class" defaultTheme="dark">
       {children}

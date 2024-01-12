@@ -1,9 +1,8 @@
-import { FunctionComponent } from "react";
 import { Item } from "./common";
 import { PageContainer, Wrapper } from "@/components";
 import { Typography, Separator } from "@/components/ui";
 
-const Career: FunctionComponent = () => {
+const Career = () => {
   return (
     <PageContainer>
       <Wrapper>

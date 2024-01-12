@@ -1,9 +1,8 @@
-import { FunctionComponent } from "react";
 import { ContactButtons, IntroductionText } from "./common";
 import { PageContainer, PostsList, Wrapper } from "@/components";
 import { Typography } from "@/components/ui";
 
-const Home: FunctionComponent = () => {
+const Home = () => {
   return (
     <PageContainer>
       <Wrapper>

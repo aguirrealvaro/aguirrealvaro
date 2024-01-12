@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import { PostWrapper } from "./common/post-wrapper";
 import { PageContainer, Wrapper } from "@/components";
 import { allPosts } from "contentlayer/generated";
@@ -9,7 +8,7 @@ type PostProps = {
   };
 };
 
-const Post: FunctionComponent<PostProps> = ({ params }) => {
+const Post = ({ params }: PostProps) => {
   return (
     <PageContainer>
       <Wrapper>

@@ -1,7 +1,6 @@
-import { FunctionComponent } from "react";
 import Image from "next/image";
 
-const ProfilePicture: FunctionComponent = () => {
+const ProfilePicture = () => {
   return (
     <Image
       src="/avatar.jpg"

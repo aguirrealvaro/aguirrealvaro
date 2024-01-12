@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import Image from "next/image";
 import { Typography } from "@/components/ui";
 import { cn } from "@/utils/cn";
@@ -14,7 +13,7 @@ type ItemProps = {
   isSubItem?: boolean;
 };
 
-const Item: FunctionComponent<ItemProps> = ({
+const Item = ({
   image,
   company,
   fromDate,
@@ -22,7 +21,7 @@ const Item: FunctionComponent<ItemProps> = ({
   description,
   subItems,
   isSubItem = false,
-}) => {
+}: ItemProps) => {
   const parsedFromDate = formatDate(fromDate, { showDay: false });
   const parsedToDate = formatDate(toDate, { showDay: false });
 

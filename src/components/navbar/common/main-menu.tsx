@@ -1,11 +1,11 @@
-import { FunctionComponent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAVIGATION_LINKS } from "@/config";
 import { cn } from "@/utils/cn";
 import { getIsExternalLink } from "@/utils/get-is-external-link";
 
-const MainMenu: FunctionComponent = () => {
+const MainMenu = () => {
   const pathname = usePathname();
   const listRef = useRef<HTMLUListElement>(null);
   const linksRef = useRef<HTMLAnchorElement[]>([]);

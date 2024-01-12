@@ -1,6 +1,6 @@
 "use client";
 
-import { FunctionComponent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { LucideIcon, LucideProps } from "lucide-react";
 
 type IconProps = {
@@ -8,11 +8,7 @@ type IconProps = {
   size?: string | number;
 } & LucideProps;
 
-const Icon: FunctionComponent<IconProps> = ({
-  icon: IconComponent,
-  size = 20,
-  ...restProps
-}) => {
+const Icon = ({ icon: IconComponent, size = 20, ...restProps }: IconProps) => {
   const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {

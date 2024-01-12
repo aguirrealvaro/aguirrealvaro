@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from "react";
+import { ReactNode } from "react";
 import { cn } from "@/utils/cn";
 
 type CodeProps = {
@@ -6,7 +6,7 @@ type CodeProps = {
   className?: string;
 };
 
-const Code: FunctionComponent<CodeProps> = ({ children, className }) => {
+const Code = ({ children, className }: CodeProps) => {
   return (
     <code
       className={cn(

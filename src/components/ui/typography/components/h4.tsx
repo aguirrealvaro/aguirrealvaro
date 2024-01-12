@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from "react";
+import { ReactNode } from "react";
 import { cn } from "@/utils/cn";
 
 type H4Props = {
@@ -6,7 +6,7 @@ type H4Props = {
   className?: string;
 };
 
-const H4: FunctionComponent<H4Props> = ({ children, className }) => {
+const H4 = ({ children, className }: H4Props) => {
   return <h4 className={cn("font-semibold text-text-heading", className)}>{children}</h4>;
 };
 

@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import { Github, Linkedin } from "lucide-react";
 import { Icon, iconButtonVariants } from "@/components/ui";
 import { cn } from "@/utils/cn";
@@ -14,7 +13,7 @@ const mediaLinks = [
   },
 ];
 
-const MediaLinks: FunctionComponent = () => {
+const MediaLinks = () => {
   return (
     <>
       {mediaLinks.map(({ href, icon }, index) => {

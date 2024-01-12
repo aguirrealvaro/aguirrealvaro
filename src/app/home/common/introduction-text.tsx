@@ -1,7 +1,6 @@
-import { FunctionComponent } from "react";
 import { Typography } from "@/components/ui";
 
-const IntroductionText: FunctionComponent = () => {
+const IntroductionText = () => {
   return (
     <div className="mb-8">
       <Typography.Paragraph>

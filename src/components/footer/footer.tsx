@@ -1,7 +1,6 @@
-import { FunctionComponent } from "react";
 import { Wrapper } from "@/components";
 
-const Footer: FunctionComponent = () => {
+const Footer = () => {
   return (
     <footer>
       <Wrapper>

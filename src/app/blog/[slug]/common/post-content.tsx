@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import Image, { ImageProps } from "next/image";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { Link, Typography } from "@/components/ui";
@@ -7,7 +6,7 @@ type PostContentProps = {
   content: string;
 };
 
-const PostContent: FunctionComponent<PostContentProps> = ({ content }) => {
+const PostContent = ({ content }: PostContentProps) => {
   const MDXContent = useMDXComponent(content);
 
   return <MDXContent components={components} />;

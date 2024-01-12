@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FunctionComponent } from "react";
+import { ButtonHTMLAttributes } from "react";
 import { Menu, X } from "lucide-react";
 import { Icon, IconButton } from "@/components/ui";
 
@@ -7,11 +7,7 @@ type BurgerProps = {
   toggleMobileMenu: () => void;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Burger: FunctionComponent<BurgerProps> = ({
-  isMobileMenuOpen,
-  toggleMobileMenu,
-  ...restProps
-}) => {
+const Burger = ({ isMobileMenuOpen, toggleMobileMenu, ...restProps }: BurgerProps) => {
   const icon = isMobileMenuOpen ? X : Menu;
 
   return (

@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import { LikeButton } from "@/components";
 import { Typography } from "@/components/ui";
 import { formatDate } from "@/utils/format-date";
@@ -15,7 +14,7 @@ type PostHeaderProps = {
   isFetchingLike: boolean;
 };
 
-const PostHeader: FunctionComponent<PostHeaderProps> = ({
+const PostHeader = ({
   title,
   publishedAt,
   description,
@@ -25,7 +24,7 @@ const PostHeader: FunctionComponent<PostHeaderProps> = ({
   likePostMutate,
   userHasLiked,
   isFetchingLike,
-}) => {
+}: PostHeaderProps) => {
   const { dateString, formattedDate } = formatDate(publishedAt);
 
   const renderMetric = (metric: number | undefined) => {

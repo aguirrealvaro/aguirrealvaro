@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import Image from "next/image";
 import { Typography, buttonVariants } from "@/components/ui";
 import { cn } from "@/utils/cn";
@@ -12,14 +11,14 @@ type SingleProjectType = {
   imgClassname?: string;
 };
 
-const SingleProject: FunctionComponent<SingleProjectType> = ({
+const SingleProject = ({
   title,
   description,
   image,
   projectLink,
   codeLink,
   imgClassname,
-}) => {
+}: SingleProjectType) => {
   return (
     <div>
       <div>

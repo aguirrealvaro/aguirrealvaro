@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from "react";
+import { ReactNode } from "react";
 import { Metadata } from "next";
 import { allPosts } from "contentlayer/generated";
 
@@ -6,7 +6,7 @@ type SlugLayoutProps = {
   children: ReactNode;
 };
 
-const SlugLayout: FunctionComponent<SlugLayoutProps> = ({ children }) => {
+const SlugLayout = ({ children }: SlugLayoutProps) => {
   return children;
 };
 

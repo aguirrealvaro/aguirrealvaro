@@ -1,6 +1,6 @@
 "use client";
 
-import { FunctionComponent, useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { MainMenu, ThemeToggle, Burger, MobileMenu, MediaLinks } from "./common";
 import { NAVBAR_TRANSITION_TIME } from "./constants";
@@ -8,7 +8,7 @@ import { Wrapper } from "@/components";
 import { useDisclosure } from "@/hooks";
 import { cn } from "@/utils/cn";
 
-const Navbar: FunctionComponent = () => {
+const Navbar = () => {
   const id = useId();
   const containerRef = useRef<HTMLDivElement>(null);
   const [navbarHeight, setNavbarHeight] = useState<number | undefined>(0);

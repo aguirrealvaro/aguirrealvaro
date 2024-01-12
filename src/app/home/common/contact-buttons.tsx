@@ -1,8 +1,7 @@
-import { FunctionComponent } from "react";
 import { buttonVariants } from "@/components/ui";
 import { cn } from "@/utils/cn";
 
-const ContactButtons: FunctionComponent = () => {
+const ContactButtons = () => {
   return (
     <div className="flex gap-4">
       <a
