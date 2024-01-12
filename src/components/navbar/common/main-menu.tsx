@@ -45,8 +45,6 @@ const MainMenu: FunctionComponent = () => {
         {NAVIGATION_LINKS.map(({ name, href, externalHref }, index) => {
           const isActive = pathname === href;
 
-          const isExternalLink = Boolean(externalHref);
-
           return (
             <li
               key={index}
@@ -55,7 +53,7 @@ const MainMenu: FunctionComponent = () => {
                 isActive ? "border-sky-500" : ""
               )}
             >
-              {isExternalLink ? (
+              {externalHref ? (
                 <a
                   href={externalHref}
                   target="_blank"

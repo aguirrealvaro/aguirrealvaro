@@ -42,15 +42,26 @@ const MobileMenu: FunctionComponent<MobileMenuProps> = ({
     >
       <nav className="mb-4">
         <ul className="flex flex-col gap-4">
-          {NAVIGATION_LINKS.map(({ name, href }, index) => {
+          {NAVIGATION_LINKS.map(({ name, href, externalHref }, index) => {
             return (
               <li key={index} className="text-center">
-                <button
-                  onClick={() => handleClick(href || "")}
-                  className="rounded p-1.5 transition hover:bg-hover-primary"
-                >
-                  {name}
-                </button>
+                {externalHref ? (
+                  <a
+                    href={externalHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded p-1.5 transition hover:bg-hover-primary"
+                  >
+                    {name}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => handleClick(href || "")}
+                    className="rounded p-1.5 transition hover:bg-hover-primary"
+                  >
+                    {name}
+                  </button>
+                )}
               </li>
             );
           })}
