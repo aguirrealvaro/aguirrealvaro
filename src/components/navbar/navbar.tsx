@@ -39,7 +39,10 @@ const Navbar: FunctionComponent = () => {
       <Wrapper className="h-full">
         <div className="flex h-full items-center justify-between">
           <Link href="/">
-            <h1 className="text-lg font-medium text-text-heading">Alvaro Aguirre </h1>
+            <h1 className="mr-4 text-lg font-medium text-text-heading">
+              <span className="sm:hidden">Alvaro Aguirre</span>
+              <span className="hidden sm:block">AA</span>
+            </h1>
           </Link>
           <MainMenu />
           <div className="flex items-center gap-4">
