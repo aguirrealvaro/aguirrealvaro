@@ -7,9 +7,10 @@ Deployed to Vercel & PlanetScale
 
 ### Backlog:
 
+- logo, title aa, visuallyhidden
 - picture
 - move medialinks to home? add email
-- remove classes on disabled state for button, iconbutton
+- disabled styles not applying for button and iconbutton
 - icon hydration
 - cached response
 
