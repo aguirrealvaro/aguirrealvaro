@@ -37,4 +37,4 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
 Link.displayName = "Link";
 
-export { Link, type LinkProps, linkVariants };
+export { Link, linkVariants };

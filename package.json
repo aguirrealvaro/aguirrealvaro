@@ -12,6 +12,7 @@
     "check-types": "tsc --noEmit",
     "prepare": "husky install",
     "pre-commit": "lint-staged --no-stash",
+    "knip": "knip",
     "generate": "prisma generate",
     "postinstall": "prisma generate"
   },
@@ -44,6 +45,7 @@
     "eslint-plugin-tailwindcss": "^3.13.1",
     "eslint-plugin-tsc": "^2.0.0",
     "husky": "^8.0.3",
+    "knip": "^3.13.2",
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.33",
     "prettier": "^3.1.1",

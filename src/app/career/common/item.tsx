@@ -65,4 +65,4 @@ const Item = ({
   );
 };
 
-export { Item, type ItemProps };
+export { Item };
