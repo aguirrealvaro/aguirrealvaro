@@ -16,14 +16,15 @@ const linkVariants = cva(["text-sky-600 dark:text-sky-500"], {
 
 type LinkProps = {
   children: ReactNode;
+  className?: string;
 } & AnchorHTMLAttributes<HTMLAnchorElement> &
   VariantProps<typeof linkVariants>;
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, underline = "hover", ...restProps }, ref) => {
+  ({ children, underline = "hover", className, ...restProps }, ref) => {
     return (
       <a
-        className={cn(linkVariants({ underline }))}
+        className={cn(linkVariants({ underline, className }))}
         ref={ref}
         target="_blank"
         rel="noopener noreferrer"

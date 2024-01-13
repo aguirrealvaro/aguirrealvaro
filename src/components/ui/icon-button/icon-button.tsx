@@ -31,7 +31,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       <button
         ref={ref}
         type="button"
-        className={cn(iconButtonVariants({ size }), className)}
+        className={cn(iconButtonVariants({ size, className }))}
         {...props}
       >
         {children}

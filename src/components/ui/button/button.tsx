@@ -322,9 +322,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
-        className={
-          (cn(buttonVariants({ block, size, shape, variant, colorScheme })), className)
-        }
+        className={cn(buttonVariants({ block, size, shape, variant, colorScheme, className }))}
         {...restProps}
       >
         {children}
