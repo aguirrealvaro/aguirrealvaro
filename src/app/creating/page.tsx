@@ -6,7 +6,7 @@ const Creating = () => {
   return (
     <PageContainer>
       <Wrapper>
-        <Typography.H3 className="mb-2">Creating</Typography.H3>
+        <Typography.H3 className="mb-4">Creating</Typography.H3>
         <span className="mb-8 inline-block text-text-secondary">
           Some of the side projects I&apos;m currently working on:
         </span>

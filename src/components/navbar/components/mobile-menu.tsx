@@ -53,7 +53,7 @@ const MobileMenu = ({
                     href={externalHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded px-3 py-1.5 transition hover:bg-hover-primary"
+                    className="rounded px-4 py-1.5 transition hover:bg-hover-primary"
                   >
                     {name}
                   </a>
@@ -64,7 +64,7 @@ const MobileMenu = ({
                 return (
                   <button
                     onClick={() => handleClick(href)}
-                    className="rounded px-3 py-1.5 transition hover:bg-hover-primary"
+                    className="rounded px-4 py-1.5 transition hover:bg-hover-primary"
                   >
                     {name}
                   </button>
