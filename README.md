@@ -7,7 +7,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- move medialinks to home? add email
 - icon hydration
 - disabled styles not applying for button and iconbutton
 - extra styles button

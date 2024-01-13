@@ -9,7 +9,7 @@ const Logo = () => {
         src="/aa-logo.png"
         width={326}
         height={326}
-        className="h-11 w-11 object-contain"
+        className="h-10 w-10 object-contain"
       />
     </Link>
   );
