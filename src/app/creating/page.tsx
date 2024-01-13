@@ -21,7 +21,7 @@ const Creating = () => {
           />
           <SingleProject
             title="aguirrealvaro.dev"
-            description="My personal website and blog. With a visit counter and a like button for each post."
+            description="My personal website and blog you are currently on. With a visit counter and a like button for each post."
             image="/aa.jpg"
             projectLink="https://www.aguirrealvaro.dev/"
             codeLink="https://github.com/aguirrealvaro/aguirrealvaro"

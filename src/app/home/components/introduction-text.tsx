@@ -12,21 +12,22 @@ const IntroductionText = () => {
       <Typography.Paragraph>
         I&apos;m passionate about modern web architectures, building{" "}
         <Typography.Bold>user-friendly</Typography.Bold> and simple digital products. I believe
-        in writing <Typography.Bold>clean and efficient code</Typography.Bold> that&apos;s easy
-        to <Typography.Bold>maintain and scale</Typography.Bold>.
+        in writing <Typography.Bold>clean</Typography.Bold> and{" "}
+        <Typography.Bold>efficient code</Typography.Bold> that&apos;s easy to{" "}
+        <Typography.Bold>maintain</Typography.Bold> and{" "}
+        <Typography.Bold>scale</Typography.Bold>.
       </Typography.Paragraph>
       <Typography.Paragraph>
         I specialize in working with technologies such as{" "}
         <Typography.Bold>
-          React, TypeScript, NextJS, React Query, Styled Components, Tailwind, Node, NestJS and
-          Prisma
+          React, TypeScript, Next, React Query, Styled Components, Tailwind, Node, Nest{" "}
         </Typography.Bold>
-        , among others. I am always willing to learn and stay up-to-date with the latest trends
-        and technologies.
+        and <Typography.Bold>Prisma</Typography.Bold>, among others. I am always willing to
+        learn and stay up-to-date with the latest trends and technologies.
       </Typography.Paragraph>
       <Typography.Paragraph>
-        I&apos;ll be sharing my journey, some of my personal projects and publishing articles
-        about topics that interest me and things I&apos;ve learned throughout my career.
+        I&apos;ll be sharing some of my personal projects and publishing articles about topics
+        that interest me and things I&apos;ve learned throughout my career, just for fun.
       </Typography.Paragraph>
     </div>
   );

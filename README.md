@@ -6,7 +6,8 @@ Deployed to Vercel & PlanetScale
 [aguirrealvaro.dev](https://aguirrealvaro.dev)
 
 ### To Do:
-
+ 
+- change blue to neutral (logo)
 - icon hydration
 - disabled styles not applying for button and iconbutton
 - extra styles button
