@@ -5,12 +5,13 @@ Deployed to Vercel & PlanetScale
 
 [aguirrealvaro.dev](https://aguirrealvaro.dev)
 
-### Backlog:
+### To Do:
 
 - picture
 - move medialinks to home? add email
-- disabled styles not applying for button and iconbutton
 - icon hydration
+- disabled styles not applying for button and iconbutton
+- extra styles button
 - cached response
 
 ### Posts:
