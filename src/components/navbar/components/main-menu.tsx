@@ -12,7 +12,7 @@ const MainMenu = () => {
 
   const [activeElement, setActiveElement] = useState<number | undefined>(undefined);
 
-  const siblingSizes = (() => {
+  const floatingElementSizes = (() => {
     if (activeElement === undefined) return undefined;
     const listLeft = listRef.current?.getBoundingClientRect().left || 0;
     const activeLinkLeft = linksRef.current[activeElement]?.getBoundingClientRect().left || 0;
@@ -35,12 +35,12 @@ const MainMenu = () => {
           role="none"
           className={cn(
             "pointer-events-none absolute rounded bg-hover-primary transition-all",
-            siblingSizes ? "opacity-100" : "opacity-0"
+            floatingElementSizes ? "opacity-100" : "opacity-0"
           )}
           style={{
-            width: `${siblingSizes?.width}px`,
-            height: `${siblingSizes?.height}px`,
-            left: `${siblingSizes?.left}px`,
+            width: `${floatingElementSizes?.width}px`,
+            height: `${floatingElementSizes?.height}px`,
+            left: `${floatingElementSizes?.left}px`,
           }}
         />
         {NAVIGATION_LINKS.map((link, index) => {
