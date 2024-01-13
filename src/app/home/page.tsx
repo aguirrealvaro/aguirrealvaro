@@ -1,4 +1,4 @@
-import { ContactButtons, IntroductionText } from "./components";
+import { ContactButtons, IntroductionText, ProfilePicture } from "./components";
 import { PageContainer, PostsList, Wrapper } from "@/components";
 import { Typography } from "@/components/ui";
 
@@ -8,12 +8,14 @@ const Home = () => {
       <Wrapper>
         <div className="mb-16">
           <Typography.H3 className="mb-4">Alvaro Aguirre</Typography.H3>
-          <div className="flex justify-between gap-10">
-            <div>
+          <div className="flex justify-between gap-10 sm:flex-col">
+            <div className="flex-2">
               <IntroductionText />
               <ContactButtons />
             </div>
-            {/* <ProfilePicture /> */}
+            <div className="flex-1 md:w-1/2">
+              <ProfilePicture />
+            </div>
           </div>
         </div>
         <div>

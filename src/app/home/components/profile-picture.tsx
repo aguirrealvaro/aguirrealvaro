@@ -7,7 +7,7 @@ const ProfilePicture = () => {
       alt="profile-picture"
       width={3024}
       height={4032}
-      className="w-1/5 rounded-lg object-cover shadow-lg"
+      className="rounded-lg object-cover shadow-lg"
     />
   );
 };

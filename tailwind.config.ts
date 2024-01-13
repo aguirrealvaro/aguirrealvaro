@@ -54,6 +54,9 @@ const config: Config = {
         "heart-like": "1",
         navbar: "2",
       },
+      flex: {
+        "2": "2 2 0%",
+      },
     },
   },
   plugins: [],
