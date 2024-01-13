@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import Link from "next/link";
-import { MainMenu, ThemeToggle, Burger, MobileMenu, MediaLinks } from "./components";
+import { MainMenu, ThemeToggle, Burger, MobileMenu, MediaLinks, Logo } from "./components";
 import { NAVBAR_TRANSITION_TIME } from "./constants";
 import { Wrapper } from "@/components";
 import { useDisclosure } from "@/hooks";
@@ -38,12 +37,7 @@ const Navbar = () => {
     >
       <Wrapper className="h-full">
         <div className="flex h-full items-center justify-between">
-          <Link href="/">
-            <h1 className="mr-4 text-lg font-medium text-text-heading">
-              <span className="sm:hidden">Alvaro Aguirre</span>
-              <span className="hidden sm:block">AA</span>
-            </h1>
-          </Link>
+          <Logo />
           <MainMenu />
           <div className="flex items-center gap-4">
             <MediaLinks />
