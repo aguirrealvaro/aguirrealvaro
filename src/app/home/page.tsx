@@ -7,7 +7,7 @@ const Home = () => {
     <PageContainer>
       <Wrapper>
         <div className="mb-16">
-          <Typography.H2 className="mb-4">Hello, there!</Typography.H2>
+          <Typography.H3 className="mb-4">Alvaro Aguirre</Typography.H3>
           <div className="flex justify-between gap-10">
             <div>
               <IntroductionText />
@@ -17,7 +17,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <Typography.H2 className="mb-4">Posts</Typography.H2>
+          <Typography.H3 className="mb-4">Posts</Typography.H3>
           <PostsList />
         </div>
       </Wrapper>

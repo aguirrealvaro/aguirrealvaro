@@ -42,7 +42,7 @@ const PostHeader = ({
           <time dateTime={dateString}>{formattedDate}</time> · {renderMetric(views)} views ·{" "}
           {renderMetric(likes)} likes
         </span>
-        <Typography.H2>{title}</Typography.H2>
+        <Typography.H2 className="mb-1">{title}</Typography.H2>
         <p className="text-text-secondary">{description}</p>
       </div>
       <LikeButton

@@ -4,7 +4,7 @@ const IntroductionText = () => {
   return (
     <div className="mb-8">
       <Typography.Paragraph>
-        I&apos;m Alvaro, a developer based in Buenos Aires, Argentina. With over 4 years of
+        Hi, I&apos;m a developer based in Buenos Aires, Argentina. With over 4 years of
         experience in web development, I specialize in{" "}
         <Typography.Bold>front-end</Typography.Bold> development while also having a solid
         background in back-end technologies.

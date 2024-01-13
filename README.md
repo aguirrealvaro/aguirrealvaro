@@ -7,7 +7,6 @@ Deployed to Vercel & PlanetScale
 
 ### Backlog:
 
-- logo, title aa, visuallyhidden
 - picture
 - move medialinks to home? add email
 - disabled styles not applying for button and iconbutton
