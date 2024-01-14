@@ -13,6 +13,7 @@ Deployed to Vercel & PlanetScale
 - disabled styles not applying for button and iconbutton
 - extra styles button
 - cached response
+- replace rq with server actions
 
 ### Posts:
 
