@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, ReactNode, forwardRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
-const buttonVariants = cva(
+const getButtonVariants = cva(
   [
     "flex items-center justify-center gap-2",
     "border border-transparent",
@@ -315,14 +315,16 @@ type ButtonProps = {
   children: ReactNode;
   className?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof buttonVariants>;
+  VariantProps<typeof getButtonVariants>;
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, block, size, shape, variant, colorScheme, className, ...restProps }, ref) => {
     return (
       <button
         ref={ref}
-        className={cn(buttonVariants({ block, size, shape, variant, colorScheme, className }))}
+        className={cn(
+          getButtonVariants({ block, size, shape, variant, colorScheme, className })
+        )}
         {...restProps}
       >
         {children}
@@ -333,4 +335,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export { Button, getButtonVariants };

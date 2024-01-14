@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/components/ui";
+import { getButtonVariants } from "@/components/ui";
 import { cn } from "@/utils/cn";
 
 const ContactButtons = () => {
@@ -8,7 +8,7 @@ const ContactButtons = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.linkedin.com/in/aguirrealvaro"
-        className={cn(buttonVariants())}
+        className={cn(getButtonVariants())}
       >
         View Linkedin
       </a>
@@ -16,7 +16,7 @@ const ContactButtons = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/aguirrealvaro"
-        className={cn(buttonVariants({ variant: "outlined" }))}
+        className={cn(getButtonVariants({ variant: "outlined" }))}
       >
         View Github
       </a>

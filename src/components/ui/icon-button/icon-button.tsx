@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, ReactNode, forwardRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
-const iconButtonVariants = cva(
+const getIconButtonVariants = cva(
   ["flex rounded", "transition hover:bg-hover-primary", "disabled:cursor-not-allowed"],
   {
     variants: {
@@ -23,7 +23,7 @@ type IconButtonProps = {
   children: ReactNode;
   className?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof iconButtonVariants>;
+  VariantProps<typeof getIconButtonVariants>;
 
 const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   ({ children, size, className, ...props }, ref) => {
@@ -31,7 +31,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       <button
         ref={ref}
         type="button"
-        className={cn(iconButtonVariants({ size, className }))}
+        className={cn(getIconButtonVariants({ size, className }))}
         {...props}
       >
         {children}
@@ -42,4 +42,4 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
 
 IconButton.displayName = "IconButton";
 
-export { IconButton, iconButtonVariants };
+export { IconButton, getIconButtonVariants };

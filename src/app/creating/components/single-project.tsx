@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Typography, buttonVariants } from "@/components/ui";
+import { Typography, getButtonVariants } from "@/components/ui";
 import { cn } from "@/utils/cn";
 
 type SingleProjectType = {
@@ -39,7 +39,7 @@ const SingleProject = ({
           href={projectLink}
           target="_blank"
           rel="noopener noreferrer"
-          className={cn(buttonVariants())}
+          className={cn(getButtonVariants())}
         >
           View Project
         </a>
@@ -47,7 +47,7 @@ const SingleProject = ({
           href={codeLink}
           target="_blank"
           rel="noopener noreferrer"
-          className={cn(buttonVariants({ variant: "outlined" }))}
+          className={cn(getButtonVariants({ variant: "outlined" }))}
         >
           View Source Code
         </a>
