@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Typography, getButtonVariants } from "@/components/ui";
+import { Button, Typography } from "@/components/ui";
 import { cn } from "@/utils/cn";
 
 type SingleProjectType = {
@@ -35,22 +35,16 @@ const SingleProject = ({
         {description}
       </Typography.Paragraph>
       <div className="flex gap-4">
-        <a
-          href={projectLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(getButtonVariants())}
-        >
-          View Project
-        </a>
-        <a
-          href={codeLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(getButtonVariants({ variant: "outlined" }))}
-        >
-          View Source Code
-        </a>
+        <Button asChild>
+          <a href={projectLink} target="_blank" rel="noopener noreferrer">
+            View Project
+          </a>
+        </Button>
+        <Button variant="outlined" asChild>
+          <a href={codeLink} target="_blank" rel="noopener noreferrer">
+            View Source Code
+          </a>
+        </Button>
       </div>
     </div>
   );

@@ -7,9 +7,9 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- button and iconbutton: slot, stop exporting getVariant, usages (contact-buttons)
+- same for iconbutton
 - error boundary
-- icon hydration
+- icon hydration (remove icon component)
 - context menu on logo
 - review useclient childrens
 - disabled styles not applying for button and iconbutton

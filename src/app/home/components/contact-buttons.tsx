@@ -1,25 +1,22 @@
-import { getButtonVariants } from "@/components/ui";
-import { cn } from "@/utils/cn";
+import { Button } from "@/components/ui";
 
 const ContactButtons = () => {
   return (
     <div className="flex gap-4">
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.linkedin.com/in/aguirrealvaro"
-        className={cn(getButtonVariants())}
-      >
-        View Linkedin
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/aguirrealvaro"
-        className={cn(getButtonVariants({ variant: "outlined" }))}
-      >
-        View Github
-      </a>
+      <Button asChild>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/aguirrealvaro"
+        >
+          View Linkedin
+        </a>
+      </Button>
+      <Button variant="outlined" asChild>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/aguirrealvaro">
+          View Github
+        </a>
+      </Button>
     </div>
   );
 };
