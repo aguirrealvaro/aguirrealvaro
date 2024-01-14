@@ -7,12 +7,12 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- icon to resume, 
-- button slot, remove buttonvariant()
+- showIcon to link, rename to external link, use it on resume? and techs?
+- button slot, remove buttonvariant() usage, same for iconbutton, remove () from exports, rename to getXVariants()
 - remove index ui components
 - icon hydration
-- review useclient childrens
 - context menu on logo
+- review useclient childrens
 - disabled styles not applying for button and iconbutton
 - extra styles button
 - cached response
