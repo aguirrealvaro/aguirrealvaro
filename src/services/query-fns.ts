@@ -1,6 +1,6 @@
 import { QueryFunctionContext } from "@tanstack/react-query";
 import { fetcher } from "./fetcher";
-import { PostType } from "@/client/interfaces";
+import { PostType } from "@/services/interfaces";
 
 export const getSinglePost = (
   context: QueryFunctionContext<[string, string]>

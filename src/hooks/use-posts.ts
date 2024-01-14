@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { PostType } from "@/client/interfaces";
-import { getPosts } from "@/client/query-fns";
+import { PostType } from "@/services/interfaces";
+import { getPosts } from "@/services/query-fns";
 
 type UsePostsReturnType = {
   posts: PostType[] | undefined;

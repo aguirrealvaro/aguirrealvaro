@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { PostType } from "@/client/interfaces";
-import { getSinglePost, getUserHasLiked, incrementView, likePost } from "@/client/query-fns";
+import { PostType } from "@/services/interfaces";
+import { getSinglePost, getUserHasLiked, incrementView, likePost } from "@/services/query-fns";
 
 type UseSinglePostReturnType = {
   post: PostType | undefined;
