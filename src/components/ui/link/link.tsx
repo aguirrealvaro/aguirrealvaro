@@ -38,4 +38,4 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
 Link.displayName = "Link";
 
-export { Link, linkVariants };
+export { Link };

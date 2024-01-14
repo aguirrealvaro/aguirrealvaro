@@ -6,9 +6,13 @@ Deployed to Vercel & PlanetScale
 [aguirrealvaro.dev](https://aguirrealvaro.dev)
 
 ### To Do:
- 
+
+- icon to resume, 
+- button slot, remove buttonvariant()
+- remove index ui components
 - icon hydration
 - review useclient childrens
+- context menu on logo
 - disabled styles not applying for button and iconbutton
 - extra styles button
 - cached response

@@ -1,10 +1,7 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { linkVariants } from "@/components/ui/link";
 import { usePosts } from "@/hooks";
-import { cn } from "@/utils/cn";
 import { formatDate } from "@/utils/format-date";
 import { allPosts } from "contentlayer/generated";
 
@@ -34,15 +31,11 @@ const PostsList = () => {
         return (
           <li key={slug} className="group border-b last:border-b-0">
             <Link href={`/blog/${slug}`} className="flex flex-col py-4 transition">
-              <h2 className="font-medium text-text-heading">{title}</h2>
+              <h2 className="font-medium text-text-heading group-hover:underline">{title}</h2>
               <span className="text-text-secondary">
                 <time dateTime={dateString}>{formattedDate}</time> ·{" "}
                 {renderMetric(relatedPost?.views)} views ·{" "}
                 {renderMetric(relatedPost?.likes.length)} likes
-              </span>
-              <span className={cn(linkVariants(), "flex items-center text-text-primary")}>
-                Read post
-                <ArrowRight size={15} className="ml-2 transition-spacing group-hover:ml-3" />
               </span>
             </Link>
           </li>

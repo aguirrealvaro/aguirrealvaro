@@ -1,1 +1,1 @@
-export { Link, linkVariants } from "./link";
+export { Link } from "./link";
