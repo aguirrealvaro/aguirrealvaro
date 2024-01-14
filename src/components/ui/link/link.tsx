@@ -2,8 +2,12 @@ import { AnchorHTMLAttributes, ReactNode, forwardRef } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
-const linkVariants = cva(["text-blue-600 dark:text-blue-500"], {
+const linkVariants = cva(undefined, {
   variants: {
+    colorScheme: {
+      neutral: "text-text-primary",
+      blue: "text-blue-600 dark:text-blue-500",
+    },
     underline: {
       hover: "hover:underline",
       true: "underline",
@@ -11,7 +15,10 @@ const linkVariants = cva(["text-blue-600 dark:text-blue-500"], {
     },
   },
   compoundVariants: [],
-  defaultVariants: {},
+  defaultVariants: {
+    colorScheme: "blue",
+    underline: "hover",
+  },
 });
 
 type LinkProps = {
@@ -21,10 +28,10 @@ type LinkProps = {
   VariantProps<typeof linkVariants>;
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, underline = "hover", className, ...restProps }, ref) => {
+  ({ children, underline = "hover", className, colorScheme, ...restProps }, ref) => {
     return (
       <a
-        className={cn(linkVariants({ underline, className }))}
+        className={cn(linkVariants({ underline, colorScheme, className }))}
         ref={ref}
         target="_blank"
         rel="noopener noreferrer"
