@@ -8,8 +8,8 @@ Deployed to Vercel & PlanetScale
 ### To Do:
 
 - client side fallback
-- context menu on logo
 - review useclient childrens
+- context menu on logo: home page, copy svg, download svg, projects
 - disabled styles not applying for button and iconbutton
 - extra styles button
 - cached response
