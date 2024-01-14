@@ -13,7 +13,7 @@ const Home = () => {
               <IntroductionText />
               <ContactButtons />
             </div>
-            <div className="flex-1 md:w-1/2">
+            <div className="flex-1">
               <ProfilePicture />
             </div>
           </div>

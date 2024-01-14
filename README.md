@@ -7,8 +7,8 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
  
-- image full or center
 - icon hydration
+- review useclient childrens
 - disabled styles not applying for button and iconbutton
 - extra styles button
 - cached response
