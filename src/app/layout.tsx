@@ -1,11 +1,16 @@
 import "@/styles/globals.css";
 import { ReactNode } from "react";
 import { Metadata } from "next";
+import { Raleway } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { QueryProvider, ThemeProvider } from "@/providers";
 import { cn } from "@/utils/cn";
-import { raleway } from "@/utils/fonts";
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  variable: "--font-raleway",
+});
 
 export const metadata: Metadata = {
   title: "Alvaro Aguirre",

@@ -7,9 +7,10 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- showIcon to link, use it on resume? and techs?
+
+- use it on resume? and techs?
 - button slot, remove buttonvariant() usage, same for iconbutton, remove () from exports
-- remove index ui components
+- error boundary
 - icon hydration
 - context menu on logo
 - review useclient childrens
