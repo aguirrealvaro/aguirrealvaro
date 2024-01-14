@@ -7,7 +7,7 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- showIcon to link, rename to external link, use it on resume? and techs?
+- showIcon to link, use it on resume? and techs?
 - button slot, remove buttonvariant() usage, same for iconbutton, remove () from exports
 - remove index ui components
 - icon hydration

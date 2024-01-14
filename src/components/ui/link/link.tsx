@@ -1,8 +1,9 @@
 import { AnchorHTMLAttributes, ReactNode, forwardRef } from "react";
 import { VariantProps, cva } from "class-variance-authority";
+import { ExternalLink } from "lucide-react";
 import { cn } from "@/utils/cn";
 
-const linkVariants = cva(undefined, {
+const getLinkVariants = cva(undefined, {
   variants: {
     colorScheme: {
       neutral: "text-text-primary",
@@ -23,21 +24,26 @@ const linkVariants = cva(undefined, {
 
 type LinkProps = {
   children: ReactNode;
+  showIcon?: boolean;
   className?: string;
 } & AnchorHTMLAttributes<HTMLAnchorElement> &
-  VariantProps<typeof linkVariants>;
+  VariantProps<typeof getLinkVariants>;
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, underline = "hover", className, colorScheme, ...restProps }, ref) => {
+  ({ children, underline, colorScheme, showIcon = true, className, ...restProps }, ref) => {
     return (
       <a
-        className={cn(linkVariants({ underline, colorScheme, className }))}
+        className={cn(
+          getLinkVariants({ underline, colorScheme, className }),
+          "inline-flex items-center gap-1"
+        )}
         ref={ref}
         target="_blank"
         rel="noopener noreferrer"
         {...restProps}
       >
         {children}
+        {showIcon && <ExternalLink size={16} />}
       </a>
     );
   }
