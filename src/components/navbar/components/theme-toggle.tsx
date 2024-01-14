@@ -1,6 +1,8 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Icon, IconButton } from "@/components/ui";
+import { ClientSide } from "@/components";
+import { IconButton } from "@/components/ui";
+import { DEFAULT_ICON_SIZE } from "@/constants";
 
 const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -11,11 +13,11 @@ const ThemeToggle = () => {
     setTheme(isLightTheme ? "dark" : "light");
   };
 
-  const icon = isLightTheme ? Sun : Moon;
-
   return (
     <IconButton onClick={handleToggle}>
-      <Icon icon={icon} />
+      <ClientSide>
+        {isLightTheme ? <Sun size={DEFAULT_ICON_SIZE} /> : <Moon size={DEFAULT_ICON_SIZE} />}
+      </ClientSide>
     </IconButton>
   );
 };

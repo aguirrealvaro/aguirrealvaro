@@ -7,7 +7,7 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- icon hydration (remove icon component)
+- client side fallback
 - context menu on logo
 - review useclient childrens
 - disabled styles not applying for button and iconbutton

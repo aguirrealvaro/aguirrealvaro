@@ -1,5 +1,4 @@
 export { Button } from "./button";
-export { Icon } from "./icon";
 export { IconButton } from "./icon-button";
 export { Typography } from "./typography";
 export { Separator } from "./separator";

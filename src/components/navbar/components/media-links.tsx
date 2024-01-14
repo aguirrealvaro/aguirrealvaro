@@ -1,29 +1,24 @@
 import { Github, Linkedin } from "lucide-react";
-import { Icon, IconButton } from "@/components/ui";
-
-const mediaLinks = [
-  {
-    href: "https://github.com/aguirrealvaro",
-    icon: Github,
-  },
-  {
-    href: "https://www.linkedin.com/in/aguirrealvaro",
-    icon: Linkedin,
-  },
-];
+import { IconButton } from "@/components/ui";
+import { DEFAULT_ICON_SIZE } from "@/constants";
 
 const MediaLinks = () => {
   return (
     <>
-      {mediaLinks.map(({ href, icon }, index) => {
-        return (
-          <IconButton key={index} asChild>
-            <a href={href} target="_blank" rel="noopener noreferrer">
-              <Icon icon={icon} />
-            </a>
-          </IconButton>
-        );
-      })}
+      <IconButton asChild>
+        <a href="https://github.com/aguirrealvaro" target="_blank" rel="noopener noreferrer">
+          <Github size={DEFAULT_ICON_SIZE} />
+        </a>
+      </IconButton>
+      <IconButton asChild>
+        <a
+          href="https://www.linkedin.com/in/aguirrealvaro"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linkedin size={DEFAULT_ICON_SIZE} />
+        </a>
+      </IconButton>
     </>
   );
 };
