@@ -7,7 +7,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- error boundary
 - icon hydration (remove icon component)
 - context menu on logo
 - review useclient childrens
