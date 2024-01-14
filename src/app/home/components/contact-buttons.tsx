@@ -8,7 +8,7 @@ const ContactButtons = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.linkedin.com/in/aguirrealvaro"
-        className={cn(buttonVariants({ colorScheme: "blue" }))}
+        className={cn(buttonVariants())}
       >
         View Linkedin
       </a>

@@ -60,10 +60,10 @@ const buttonVariants = cva(
         variant: "primary",
         colorScheme: "blue",
         className: [
-          "border-sky-600 bg-sky-600 text-white",
-          "hover:border-sky-700 hover:bg-sky-700",
-          "dark:border-sky-500 dark:bg-sky-500 dark:text-black",
-          "dark:hover:border-sky-400 dark:hover:bg-sky-400",
+          "border-blue-600 bg-blue-600 text-white",
+          "hover:border-blue-700 hover:bg-blue-700",
+          "dark:border-blue-500 dark:bg-blue-500 dark:text-black",
+          "dark:hover:border-blue-400 dark:hover:bg-blue-400",
         ],
       },
       {
@@ -111,10 +111,10 @@ const buttonVariants = cva(
         variant: "secondary",
         colorScheme: "blue",
         className: [
-          "bg-sky-100 text-sky-600",
-          "hover:bg-sky-200",
-          "dark:bg-sky-950 dark:text-sky-300",
-          "dark:hover:bg-sky-900",
+          "bg-blue-100 text-blue-600",
+          "hover:bg-blue-200",
+          "dark:bg-blue-950 dark:text-blue-300",
+          "dark:hover:bg-blue-900",
         ],
       },
       {
@@ -162,10 +162,10 @@ const buttonVariants = cva(
         variant: "outlined",
         colorScheme: "blue",
         className: [
-          "border-sky-200 text-sky-600",
-          "hover:bg-sky-100",
-          "dark:border-sky-900 dark:text-sky-400",
-          "dark:hover:bg-sky-950",
+          "border-blue-200 text-blue-600",
+          "hover:bg-blue-100",
+          "dark:border-blue-900 dark:text-blue-400",
+          "dark:hover:bg-blue-950",
         ],
       },
       {
@@ -213,10 +213,10 @@ const buttonVariants = cva(
         variant: "ghost",
         colorScheme: "blue",
         className: [
-          "text-sky-600",
-          "hover:bg-sky-100",
-          "dark:text-sky-600",
-          "dark:hover:bg-sky-950",
+          "text-blue-600",
+          "hover:bg-blue-100",
+          "dark:text-blue-600",
+          "dark:hover:bg-blue-950",
         ],
       },
       {
@@ -258,7 +258,7 @@ const buttonVariants = cva(
       {
         variant: "link",
         colorScheme: "blue",
-        className: ["text-sky-600", "dark: text-sky-500"],
+        className: ["text-blue-600", "dark: text-blue-500"],
       },
       {
         variant: "link",
@@ -284,7 +284,7 @@ const buttonVariants = cva(
       {
         variant: "plain",
         colorScheme: "blue",
-        className: "text-sky-500 dark:text-sky-500",
+        className: "text-blue-500 dark:text-blue-500",
       },
       {
         variant: "plain",

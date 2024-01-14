@@ -93,7 +93,7 @@ const MainMenu = () => {
               key={index}
               className={cn(
                 "flex h-full items-center border-b-2 border-transparent",
-                isActive ? "border-sky-500" : ""
+                isActive ? "border-text-primary" : ""
               )}
             >
               {renderLink()}

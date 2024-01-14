@@ -7,7 +7,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
  
-- change blue to neutral
 - image full or center
 - icon hydration
 - disabled styles not applying for button and iconbutton

@@ -2,7 +2,7 @@ import { AnchorHTMLAttributes, ReactNode, forwardRef } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
-const linkVariants = cva(["text-sky-600 dark:text-sky-500"], {
+const linkVariants = cva(["text-blue-600 dark:text-blue-500"], {
   variants: {
     underline: {
       hover: "hover:underline",
