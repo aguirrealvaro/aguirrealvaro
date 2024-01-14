@@ -1,5 +1,6 @@
 import { HTMLAttributes } from "react";
 import { useRouter } from "next/navigation";
+import { Link } from "@/components/ui";
 import { NAVIGATION_LINKS } from "@/config";
 import { useKeyPress } from "@/hooks";
 import { cn } from "@/utils/cn";
@@ -49,14 +50,16 @@ const MobileMenu = ({
                 const { name, externalHref } = link;
 
                 return (
-                  <a
+                  <Link
+                    colorScheme="neutral"
+                    underline={false}
                     href={externalHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded px-4 py-1.5 transition hover:bg-hover-primary"
                   >
                     {name}
-                  </a>
+                  </Link>
                 );
               } else {
                 const { name, href } = link;

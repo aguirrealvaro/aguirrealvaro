@@ -7,9 +7,7 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-
-- use it on resume? and techs?
-- button slot, remove buttonvariant() usage, same for iconbutton, remove () from exports
+- button and iconbutton: slot, stop exporting getVariant, usages (contact-buttons)
 - error boundary
 - icon hydration
 - context menu on logo

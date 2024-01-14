@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Link as ExternalLink } from "@/components/ui";
 import { NAVIGATION_LINKS } from "@/config";
 import { cn } from "@/utils/cn";
 import { getIsExternalLink } from "@/utils/get-is-external-link";
@@ -60,7 +61,9 @@ const MainMenu = () => {
               const { name, externalHref } = link;
 
               return (
-                <a
+                <ExternalLink
+                  colorScheme="neutral"
+                  underline={false}
                   href={externalHref}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -68,7 +71,7 @@ const MainMenu = () => {
                   {...commonProps}
                 >
                   {name}
-                </a>
+                </ExternalLink>
               );
             } else {
               const { name, href } = link;
