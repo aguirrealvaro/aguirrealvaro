@@ -1,6 +1,5 @@
 import { Github, Linkedin } from "lucide-react";
-import { Icon, getIconButtonVariants } from "@/components/ui";
-import { cn } from "@/utils/cn";
+import { Icon, IconButton } from "@/components/ui";
 
 const mediaLinks = [
   {
@@ -18,15 +17,11 @@ const MediaLinks = () => {
     <>
       {mediaLinks.map(({ href, icon }, index) => {
         return (
-          <a
-            key={index}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(getIconButtonVariants())}
-          >
-            <Icon icon={icon} />
-          </a>
+          <IconButton key={index} asChild>
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              <Icon icon={icon} />
+            </a>
+          </IconButton>
         );
       })}
     </>

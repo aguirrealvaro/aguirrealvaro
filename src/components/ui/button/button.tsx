@@ -5,7 +5,7 @@ import { cn } from "@/utils/cn";
 
 const getButtonVariants = cva(
   [
-    "flex items-center justify-center gap-2",
+    "inline-flex items-center justify-center gap-2",
     "border border-transparent",
     "transition",
     "disabled:cursor-not-allowed",

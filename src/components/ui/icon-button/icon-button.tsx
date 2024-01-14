@@ -1,4 +1,5 @@
-import { ButtonHTMLAttributes, ReactNode, forwardRef } from "react";
+import { ButtonHTMLAttributes, forwardRef } from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
@@ -20,26 +21,26 @@ const getIconButtonVariants = cva(
 );
 
 type IconButtonProps = {
-  children: ReactNode;
   className?: string;
+  asChild?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof getIconButtonVariants>;
 
 const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ children, size, className, ...props }, ref) => {
+  ({ size, className, asChild, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+
     return (
-      <button
+      <Comp
         ref={ref}
         type="button"
         className={cn(getIconButtonVariants({ size, className }))}
         {...props}
-      >
-        {children}
-      </button>
+      />
     );
   }
 );
 
 IconButton.displayName = "IconButton";
 
-export { IconButton, getIconButtonVariants };
+export { IconButton };
