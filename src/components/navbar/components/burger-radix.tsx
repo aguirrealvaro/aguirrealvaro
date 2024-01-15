@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X } from "lucide-react";
 import { IconButton } from "@/components/ui";
@@ -9,10 +9,9 @@ import { cn } from "@/utils/cn";
 
 /* 
     TO DO:
-    - close dialog on resize
-    - title and descriptions with sr-only
     - content
-    - show only for mobile
+    - use data-state on icons
+    - delete old code
     - dialog or menu?
 */
 type BurgerRadixProps = {
@@ -21,6 +20,13 @@ type BurgerRadixProps = {
 
 const BurgerRadix = ({ navbarHeight }: BurgerRadixProps) => {
   const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const onClose = () => setOpen(false);
+    window.addEventListener("resize", onClose);
+    return () => window.removeEventListener("resize", onClose);
+  }, [open]);
 
   return (
     <div className="hidden sm:block">
@@ -32,6 +38,7 @@ const BurgerRadix = ({ navbarHeight }: BurgerRadixProps) => {
           </IconButton>
         </Dialog.Trigger>
         <Dialog.Portal>
+          <Dialog.Title className="sr-only">Mobile menu</Dialog.Title>
           <Dialog.Content
             style={{ top: `${navbarHeight}px` }}
             className={cn(
