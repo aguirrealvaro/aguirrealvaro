@@ -60,9 +60,7 @@ const Navbar = () => {
               id={mobileMenuId}
               role="menu"
               aria-labelledby={burgerId}
-            >
-              mobile menu
-            </MobileMenu>
+            />
           )}
         </div>
       </Wrapper>
