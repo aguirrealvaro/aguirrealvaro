@@ -3,25 +3,17 @@
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X } from "lucide-react";
-// import { useRouter } from "next/router";
 import { IconButton, Link } from "@/components/ui";
 import { NAVIGATION_LINKS } from "@/config";
 import { DEFAULT_ICON_SIZE } from "@/constants";
 import { cn } from "@/utils/cn";
 import { getIsExternalLink } from "@/utils/get-is-external-link";
 
-/* 
-    TO DO:
-    - fix router
-    - dialog or menu?
-*/
-
 type BurgerProps = {
   navbarHeight: number | undefined;
 };
 
 const Burger = ({ navbarHeight }: BurgerProps) => {
-  //const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -32,7 +24,8 @@ const Burger = ({ navbarHeight }: BurgerProps) => {
   }, [open]);
 
   const handleClick = (href: string) => {
-    // router.push(href);
+    // router.push(href); // getting error `nextrouter was not mounted`
+    window.history.replaceState(null, "", href);
     setOpen(false);
   };
 

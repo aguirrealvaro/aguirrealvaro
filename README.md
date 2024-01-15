@@ -9,7 +9,7 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- radix dialog on mobile menu (if not, overflow scroll on mobile mneu)
+- radix dialog on mobile menu (if not, overflow scroll on mobile menu, buttonVariants, logo height)
 - review useclient childrens
 - context menu on logo: home page, copy svg, projects
 - replace rq with server actions
