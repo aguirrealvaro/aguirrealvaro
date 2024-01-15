@@ -9,7 +9,7 @@ type ThemeProviderProps = {
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
   return (
-    <NextThemeProvider attribute="class" defaultTheme="light">
+    <NextThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
       {children}
     </NextThemeProvider>
   );

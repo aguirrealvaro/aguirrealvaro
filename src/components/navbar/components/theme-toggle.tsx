@@ -4,10 +4,10 @@ import { IconButton } from "@/components/ui";
 import { DEFAULT_ICON_SIZE } from "@/constants";
 
 const ThemeToggle = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const handleToggle = () => {
-    setTheme(resolvedTheme === "light" ? "dark" : "light");
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
