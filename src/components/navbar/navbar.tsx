@@ -7,11 +7,11 @@ import { cn } from "@/utils/cn";
 
 const Navbar = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [navbarHeight, setNavbarHeight] = useState<number | undefined>(0);
+  const [navbarHeight, setNavbarHeight] = useState<number>(0);
 
   useEffect(() => {
     if (!containerRef.current) return;
-    setNavbarHeight(containerRef.current?.offsetHeight);
+    setNavbarHeight(containerRef.current.offsetHeight);
   }, []);
 
   return (
