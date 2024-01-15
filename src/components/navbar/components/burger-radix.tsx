@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X } from "lucide-react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { IconButton, Link } from "@/components/ui";
 import { NAVIGATION_LINKS } from "@/config";
 import { DEFAULT_ICON_SIZE } from "@/constants";
@@ -12,11 +12,10 @@ import { getIsExternalLink } from "@/utils/get-is-external-link";
 
 /* 
     TO DO:
-    - content
-    - use data-state on icons
-    - delete old code (knip, usedisclosure, mobile-menu, burger, usekyepress, useid)
+    - fix router
     - dialog or menu?
 */
+
 type BurgerRadixProps = {
   navbarHeight: number | undefined;
 };
