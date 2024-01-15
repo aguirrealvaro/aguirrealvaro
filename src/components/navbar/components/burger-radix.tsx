@@ -3,15 +3,18 @@
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X } from "lucide-react";
-import { IconButton } from "@/components/ui";
+import { useRouter } from "next/router";
+import { IconButton, Link } from "@/components/ui";
+import { NAVIGATION_LINKS } from "@/config";
 import { DEFAULT_ICON_SIZE } from "@/constants";
 import { cn } from "@/utils/cn";
+import { getIsExternalLink } from "@/utils/get-is-external-link";
 
 /* 
     TO DO:
     - content
     - use data-state on icons
-    - delete old code
+    - delete old code (knip, usedisclosure, mobile-menu, burger, usekyepress, useid)
     - dialog or menu?
 */
 type BurgerRadixProps = {
@@ -19,6 +22,7 @@ type BurgerRadixProps = {
 };
 
 const BurgerRadix = ({ navbarHeight }: BurgerRadixProps) => {
+  //const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -27,6 +31,11 @@ const BurgerRadix = ({ navbarHeight }: BurgerRadixProps) => {
     window.addEventListener("resize", onClose);
     return () => window.removeEventListener("resize", onClose);
   }, [open]);
+
+  const handleClick = (href: string) => {
+    // router.push(href);
+    setOpen(false);
+  };
 
   return (
     <div className="hidden sm:block">
@@ -38,7 +47,6 @@ const BurgerRadix = ({ navbarHeight }: BurgerRadixProps) => {
           </IconButton>
         </Dialog.Trigger>
         <Dialog.Portal>
-          <Dialog.Title className="sr-only">Mobile menu</Dialog.Title>
           <Dialog.Content
             style={{ top: `${navbarHeight}px` }}
             className={cn(
@@ -48,7 +56,48 @@ const BurgerRadix = ({ navbarHeight }: BurgerRadixProps) => {
             )}
             onInteractOutside={(e) => e.preventDefault()}
           >
-            Content!
+            <Dialog.Title className="sr-only">Mobile menu</Dialog.Title>
+            <nav className="mb-4">
+              <ul className="flex flex-col gap-4">
+                {NAVIGATION_LINKS.map((link, index) => {
+                  const renderLink = () => {
+                    if (getIsExternalLink(link)) {
+                      const { name, externalHref } = link;
+
+                      return (
+                        <Link
+                          colorScheme="neutral"
+                          underline={false}
+                          href={externalHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="rounded px-4 py-1.5 transition hover:bg-hover-primary"
+                        >
+                          {name}
+                        </Link>
+                      );
+                    } else {
+                      const { name, href } = link;
+
+                      return (
+                        <button
+                          onClick={() => handleClick(href)}
+                          className="rounded px-4 py-1.5 transition hover:bg-hover-primary"
+                        >
+                          {name}
+                        </button>
+                      );
+                    }
+                  };
+
+                  return (
+                    <li key={index} className="text-center">
+                      {renderLink()}
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>
