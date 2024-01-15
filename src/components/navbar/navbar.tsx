@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { MainMenu, ThemeToggle, MediaLinks, Logo, BurgerRadix } from "./components";
+import { MainMenu, ThemeToggle, MediaLinks, Logo, Burger } from "./components";
 import { Wrapper } from "@/components";
 import { cn } from "@/utils/cn";
 
@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <MediaLinks />
             <ThemeToggle />
-            <BurgerRadix navbarHeight={navbarHeight} />
+            <Burger navbarHeight={navbarHeight} />
           </div>
         </div>
       </Wrapper>

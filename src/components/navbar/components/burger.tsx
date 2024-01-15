@@ -16,11 +16,11 @@ import { getIsExternalLink } from "@/utils/get-is-external-link";
     - dialog or menu?
 */
 
-type BurgerRadixProps = {
+type BurgerProps = {
   navbarHeight: number | undefined;
 };
 
-const BurgerRadix = ({ navbarHeight }: BurgerRadixProps) => {
+const Burger = ({ navbarHeight }: BurgerProps) => {
   //const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
 
@@ -104,4 +104,4 @@ const BurgerRadix = ({ navbarHeight }: BurgerRadixProps) => {
   );
 };
 
-export { BurgerRadix };
+export { Burger };
