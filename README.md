@@ -9,7 +9,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- ring focus neutral button
 - review useclient childrens
 - context menu on logo: home page, copy svg, projects
 - replace rq with server actions

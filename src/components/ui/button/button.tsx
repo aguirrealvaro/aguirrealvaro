@@ -51,6 +51,7 @@ const getButtonVariants = cva(
         variant: "primary",
         colorScheme: "neutral",
         className: [
+          "focus:ring-4",
           "border-black bg-black text-white",
           "hover:border-neutral-800 hover:bg-neutral-800",
           "dark:border-white dark:bg-white dark:text-black",
