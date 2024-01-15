@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { IconButton, Link } from "@/components/ui";
 import { NAVIGATION_LINKS } from "@/config";
 import { DEFAULT_ICON_SIZE } from "@/constants";
+import { useDisableScroll } from "@/hooks";
 import { cn } from "@/utils/cn";
 import { getIsExternalLink } from "@/utils/get-is-external-link";
 
@@ -22,6 +23,8 @@ const Burger = ({ navbarHeight }: BurgerProps) => {
     window.addEventListener("resize", onClose);
     return () => window.removeEventListener("resize", onClose);
   }, [open]);
+
+  useDisableScroll(open);
 
   const handleClick = (href: string) => {
     // router.push(href); // getting error `nextrouter was not mounted`

@@ -9,6 +9,7 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
+- fix mobile links
 - review useclient childrens
 - context menu on logo: home page, copy svg, projects
 - replace rq with server actions
