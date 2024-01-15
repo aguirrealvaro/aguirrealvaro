@@ -7,7 +7,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- client side fallback
 - review useclient childrens
 - context menu on logo: home page, copy svg, download svg, projects
 - disabled styles not applying for button and iconbutton

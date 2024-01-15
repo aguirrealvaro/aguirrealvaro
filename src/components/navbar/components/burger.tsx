@@ -1,6 +1,5 @@
 import { ButtonHTMLAttributes } from "react";
 import { Menu, X } from "lucide-react";
-import { ClientSide } from "@/components";
 import { IconButton } from "@/components/ui";
 import { DEFAULT_ICON_SIZE } from "@/constants";
 
@@ -13,13 +12,8 @@ const Burger = ({ isMobileMenuOpen, toggleMobileMenu, ...restProps }: BurgerProp
   return (
     <div className="hidden sm:block">
       <IconButton onClick={toggleMobileMenu} {...restProps}>
-        <ClientSide>
-          {isMobileMenuOpen ? (
-            <X size={DEFAULT_ICON_SIZE} />
-          ) : (
-            <Menu size={DEFAULT_ICON_SIZE} />
-          )}
-        </ClientSide>
+        <Menu size={DEFAULT_ICON_SIZE} className={isMobileMenuOpen ? "hidden" : "block"} />
+        <X size={DEFAULT_ICON_SIZE} className={isMobileMenuOpen ? "block" : "hidden"} />
       </IconButton>
     </div>
   );
