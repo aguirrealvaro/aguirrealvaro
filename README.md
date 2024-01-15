@@ -9,7 +9,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- layout import components?
 - ring focus neutral button
 - review useclient childrens
 - context menu on logo: home page, copy svg, projects
