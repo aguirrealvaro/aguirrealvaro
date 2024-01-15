@@ -11,7 +11,6 @@ Deployed to Vercel & PlanetScale
 
 - layout import components?
 - ring focus neutral button
-- react import to above
 - review useclient childrens
 - context menu on logo: home page, copy svg, projects
 - replace rq with server actions

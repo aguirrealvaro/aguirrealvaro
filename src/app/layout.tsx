@@ -15,8 +15,7 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: "Alvaro Aguirre",
-  description:
-    "I'll be sharing some of my personal projects and publishing articles about topics that interest me and things I've learned throughout my career",
+  description: "Personal website & blog",
 };
 
 type RootLayoutProps = {
