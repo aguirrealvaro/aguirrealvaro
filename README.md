@@ -9,7 +9,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- radix dialog on mobile menu
 - review useclient childrens
 - context menu on logo: home page, copy svg, projects
 - replace rq with server actions

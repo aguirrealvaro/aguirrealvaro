@@ -1,31 +1,18 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
-import { MainMenu, ThemeToggle, Burger, MobileMenu, MediaLinks, Logo } from "./components";
-import { NAVBAR_TRANSITION_TIME } from "./constants";
+import { useEffect, useRef, useState } from "react";
+import { MainMenu, ThemeToggle, MediaLinks, Logo, Burger } from "./components";
 import { Wrapper } from "@/components";
-import { useDisclosure } from "@/hooks";
 import { cn } from "@/utils/cn";
 
 const Navbar = () => {
-  const id = useId();
   const containerRef = useRef<HTMLDivElement>(null);
   const [navbarHeight, setNavbarHeight] = useState<number | undefined>(0);
-
-  const {
-    isOpen: isMobileMenuOpen,
-    onToggle: toggleMobileMenu,
-    onClose: closeMobileMenu,
-    isUnmounting,
-  } = useDisclosure({ timeout: NAVBAR_TRANSITION_TIME, closeOnResize: true });
 
   useEffect(() => {
     if (!containerRef.current) return;
     setNavbarHeight(containerRef.current?.offsetHeight);
   }, []);
-
-  const burgerId = `${id}-burger`;
-  const mobileMenuId = `${id}-mobile-menu`;
 
   return (
     <header
@@ -42,26 +29,8 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <MediaLinks />
             <ThemeToggle />
-            <Burger
-              isMobileMenuOpen={isMobileMenuOpen}
-              toggleMobileMenu={toggleMobileMenu}
-              id={burgerId}
-              aria-expanded={isMobileMenuOpen}
-              aria-haspopup="menu"
-              aria-controls={mobileMenuId}
-            />
+            <Burger navbarHeight={navbarHeight} />
           </div>
-          {isMobileMenuOpen && (
-            <MobileMenu
-              isMobileMenuOpen={isMobileMenuOpen}
-              navbarHeight={navbarHeight}
-              closeMobileMenu={closeMobileMenu}
-              isUnmounting={isUnmounting}
-              id={mobileMenuId}
-              role="menu"
-              aria-labelledby={burgerId}
-            />
-          )}
         </div>
       </Wrapper>
     </header>
