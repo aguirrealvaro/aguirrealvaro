@@ -39,10 +39,10 @@ const getButtonVariants = cva(
       },
       colorScheme: {
         neutral: "",
-        blue: "",
-        green: "",
-        red: "",
-        yellow: "",
+        accent: "",
+        success: "",
+        danger: "",
+        warning: "",
       },
     },
     compoundVariants: [
@@ -60,7 +60,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "primary",
-        colorScheme: "blue",
+        colorScheme: "accent",
         className: [
           "border-blue-600 bg-blue-600 text-white",
           "hover:border-blue-700 hover:bg-blue-700",
@@ -70,7 +70,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "primary",
-        colorScheme: "green",
+        colorScheme: "success",
         className: [
           "border-emerald-600 bg-emerald-600 text-white",
           "hover:border-emerald-700 hover:bg-emerald-700",
@@ -80,7 +80,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "primary",
-        colorScheme: "yellow",
+        colorScheme: "warning",
         className: [
           "border-yellow-500 bg-yellow-500 text-black",
           "hover:border-yellow-600 hover:bg-yellow-600",
@@ -90,7 +90,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "primary",
-        colorScheme: "red",
+        colorScheme: "danger",
         className: [
           "border-red-600 bg-red-600 text-white",
           "hover:border-red-700 hover:bg-red-700",
@@ -111,7 +111,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "secondary",
-        colorScheme: "blue",
+        colorScheme: "accent",
         className: [
           "bg-blue-100 text-blue-600",
           "hover:bg-blue-200",
@@ -121,7 +121,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "secondary",
-        colorScheme: "green",
+        colorScheme: "success",
         className: [
           "bg-emerald-100 text-emerald-700",
           "hover:bg-emerald-200",
@@ -131,7 +131,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "secondary",
-        colorScheme: "yellow",
+        colorScheme: "warning",
         className: [
           "bg-yellow-100 text-yellow-600",
           "hover:bg-yellow-200",
@@ -141,7 +141,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "secondary",
-        colorScheme: "red",
+        colorScheme: "danger",
         className: [
           "bg-red-100 text-red-700",
           "hover:bg-red-200",
@@ -162,7 +162,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "outlined",
-        colorScheme: "blue",
+        colorScheme: "accent",
         className: [
           "border-blue-200 text-blue-600",
           "hover:bg-blue-100",
@@ -172,7 +172,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "outlined",
-        colorScheme: "green",
+        colorScheme: "success",
         className: [
           "border-emerald-200 text-emerald-600",
           "hover:bg-emerald-100",
@@ -182,7 +182,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "outlined",
-        colorScheme: "yellow",
+        colorScheme: "warning",
         className: [
           "border-yellow-200 text-yellow-600",
           "hover:bg-yellow-100",
@@ -192,7 +192,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "outlined",
-        colorScheme: "red",
+        colorScheme: "danger",
         className: [
           "border-red-200 text-red-600",
           "hover:bg-red-100",
@@ -213,7 +213,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "ghost",
-        colorScheme: "blue",
+        colorScheme: "accent",
         className: [
           "text-blue-600",
           "hover:bg-blue-100",
@@ -223,7 +223,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "ghost",
-        colorScheme: "green",
+        colorScheme: "success",
         className: [
           "text-emerald-600",
           "hover:bg-emerald-100",
@@ -233,7 +233,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "ghost",
-        colorScheme: "yellow",
+        colorScheme: "warning",
         className: [
           "text-yellow-600",
           "hover:bg-yellow-100",
@@ -243,7 +243,7 @@ const getButtonVariants = cva(
       },
       {
         variant: "ghost",
-        colorScheme: "red",
+        colorScheme: "danger",
         className: [
           "text-red-600",
           "hover:bg-red-100",
@@ -259,22 +259,22 @@ const getButtonVariants = cva(
       },
       {
         variant: "link",
-        colorScheme: "blue",
+        colorScheme: "accent",
         className: ["text-blue-600", "dark: text-blue-500"],
       },
       {
         variant: "link",
-        colorScheme: "green",
+        colorScheme: "success",
         className: ["text-emerald-600", "dark: text-emerald-500"],
       },
       {
         variant: "link",
-        colorScheme: "yellow",
+        colorScheme: "warning",
         className: ["text-yellow-600", "dark: text-yellow-500"],
       },
       {
         variant: "link",
-        colorScheme: "red",
+        colorScheme: "danger",
         className: ["text-red-600", "dark: text-red-500"],
       },
       // Plain
@@ -285,22 +285,22 @@ const getButtonVariants = cva(
       },
       {
         variant: "plain",
-        colorScheme: "blue",
+        colorScheme: "accent",
         className: "text-blue-500 dark:text-blue-500",
       },
       {
         variant: "plain",
-        colorScheme: "green",
+        colorScheme: "success",
         className: "text-emerald-500 dark:text-emerald-500",
       },
       {
         variant: "plain",
-        colorScheme: "yellow",
+        colorScheme: "warning",
         className: "text-yellow-500 dark:text-yellow-400",
       },
       {
         variant: "plain",
-        colorScheme: "red",
+        colorScheme: "danger",
         className: "text-red-500 dark:text-red-500",
       },
     ],
