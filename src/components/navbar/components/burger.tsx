@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { IconButton, Link } from "@/components/ui";
 import { NAVIGATION_LINKS } from "@/config";
 import { DEFAULT_ICON_SIZE } from "@/constants";
@@ -15,6 +16,7 @@ type BurgerProps = {
 };
 
 const Burger = ({ navbarHeight }: BurgerProps) => {
+  const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -27,9 +29,8 @@ const Burger = ({ navbarHeight }: BurgerProps) => {
   useDisableScroll(open);
 
   const handleClick = (href: string) => {
-    // router.push(href); // getting error `nextrouter was not mounted`
-    window.history.replaceState(null, "", href);
     setOpen(false);
+    router.push(href);
   };
 
   return (
