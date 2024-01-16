@@ -9,8 +9,7 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- review useclient childrens
-- context menu on logo: home page, copy svg, projects
+- context menu on logo: home page, copy svg
 - replace rq with server actions
 
 ### Backlog:
