@@ -9,6 +9,7 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
+- button & iconbutton: enabled, colorschemes, disabled, greys
 - context menu on logo: home page, copy svg
 - replace rq with server actions
 
