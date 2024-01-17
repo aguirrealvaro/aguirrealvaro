@@ -1,6 +1,7 @@
 import { PostType } from "@/types";
 import prisma from "@/utils/prisma";
 
+// get post with the incremented view
 export const getIncrementedPost = async (slug: string): Promise<PostType> => {
   const post = await prisma.post.update({
     where: { slug },

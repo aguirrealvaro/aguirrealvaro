@@ -13,8 +13,9 @@ Deployed to Vercel & PlanetScale
 
 ### RSC:
 
-- revalidate
 - loadings
+- revalidate
+- promise all
 
 ### Posts:
 
