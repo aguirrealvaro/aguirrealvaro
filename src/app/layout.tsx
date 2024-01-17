@@ -20,7 +20,8 @@ type RootLayoutProps = {
   children: ReactNode;
 };
 
-// export const dynamic = "force-dynamic";
+// avoid caching
+export const dynamic = "force-dynamic";
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
