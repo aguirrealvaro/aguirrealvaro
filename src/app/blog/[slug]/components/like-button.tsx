@@ -14,7 +14,7 @@ const LikeButton = ({ isLiked, handleLikePost }: LikeButtonProps) => {
   return (
     <div className="relative z-heart-like inline-flex">
       <form action={handleLikePost}>
-        <button type="button">
+        <button type="submit">
           <Heart fill={isLiked ? redColor : "transparent"} color={redColor} />
         </button>
       </form>

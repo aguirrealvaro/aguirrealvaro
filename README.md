@@ -15,6 +15,7 @@ Deployed to Vercel & PlanetScale
 
 - replace prisma object
 - revalidate
+- loadings
 - get slug from search params
 
 ### Posts:

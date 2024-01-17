@@ -23,9 +23,6 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
   const handleLikePost = async () => {
     "use server";
 
-    // eslint-disable-next-line no-console
-    console.log("handleLikePost");
-
     const post = await prisma.post.findUnique({ where: { slug } });
     if (!post) {
       throw new Error("Post does not exists");
@@ -34,18 +31,19 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
     const like = await prisma.likes.findFirst({
       where: { sessionId: sessionId, postId: post.id },
     });
+
     if (like) {
       await prisma.likes.delete({
         where: { id: like.id },
       });
+    } else {
+      await prisma.likes.create({
+        data: {
+          sessionId: sessionId,
+          postId: post.id,
+        },
+      });
     }
-
-    await prisma.likes.create({
-      data: {
-        sessionId: sessionId,
-        postId: post.id,
-      },
-    });
   };
 
   return (
