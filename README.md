@@ -9,7 +9,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- image size
 - replace rq with server actions (fix cached response)
 
 ### Posts:
