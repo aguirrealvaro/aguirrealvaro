@@ -37,7 +37,11 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
         <Typography.H2 className="mb-1">{title}</Typography.H2>
         <p className="text-text-secondary">{description}</p>
       </div>
-      <LikeButton isLiked={isLiked} handleLikePost={handleLikePost} />
+      <div className="relative z-heart-like inline-flex">
+        <form action={handleLikePost}>
+          <LikeButton isLiked={isLiked} />
+        </form>
+      </div>
     </div>
   );
 };

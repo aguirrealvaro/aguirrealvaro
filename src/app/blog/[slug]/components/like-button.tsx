@@ -1,25 +1,23 @@
 "use client";
 
+import { useFormStatus } from "react-dom";
 import { Heart } from "lucide-react";
 import colors from "tailwindcss/colors";
 
 type LikeButtonProps = {
   isLiked: boolean;
-  handleLikePost: () => Promise<void>;
 };
 
-const LikeButton = ({ isLiked, handleLikePost }: LikeButtonProps) => {
-  const redColor = colors.red[500];
+const LikeButton = ({ isLiked }: LikeButtonProps) => {
+  const { pending } = useFormStatus();
+
+  const red = colors.red[500];
 
   return (
-    <div className="relative z-heart-like inline-flex">
-      <form action={handleLikePost}>
-        <button type="submit">
-          <Heart fill={isLiked ? redColor : "transparent"} color={redColor} />
-        </button>
-      </form>
-      {false && <span className="absolute right-[calc(100%+2px)]">...</span>}
-    </div>
+    <button type="submit">
+      {pending && <span className="absolute right-[calc(100%+2px)]">...</span>}
+      <Heart fill={isLiked ? red : "transparent"} color={red} />
+    </button>
   );
 };
 

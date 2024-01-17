@@ -13,7 +13,7 @@ Deployed to Vercel & PlanetScale
 
 ### RSC:
 
-- loading server action
+- try/catch
 - suspenses (metrics.tsx, client-like-button.tsx)
 
 ### Posts:
