@@ -1,11 +1,9 @@
 import { Suspense } from "react";
 import { LikeButton } from "./like-button";
-import { Metrics } from "@/app/blog/[slug]/components/metrics";
+import { Metrics } from "./metrics";
 import { Typography } from "@/components/ui";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getSession, getIsLiked, likePost } from "@/services";
 import { formatDate } from "@/utils/format-date";
-export { Metrics } from "./metrics";
 
 type PostHeaderProps = {
   slug: string;
@@ -15,15 +13,7 @@ type PostHeaderProps = {
 };
 
 const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderProps) => {
-  const sessionId = await getSession();
-  const isLiked = await getIsLiked(slug, sessionId);
-
   const { dateString, formattedDate } = formatDate(publishedAt);
-
-  const handleLikePost = async () => {
-    "use server";
-    await likePost(slug, sessionId);
-  };
 
   return (
     <div className="mb-8 flex items-center justify-between">
@@ -37,11 +27,9 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
         <Typography.H2 className="mb-1">{title}</Typography.H2>
         <p className="text-text-secondary">{description}</p>
       </div>
-      <div className="relative z-heart-like inline-flex">
-        <form action={handleLikePost}>
-          <LikeButton isLiked={isLiked} />
-        </form>
-      </div>
+      <Suspense fallback={<Skeleton className="h-6 w-6" />}>
+        <LikeButton slug={slug} />
+      </Suspense>
     </div>
   );
 };

@@ -1,23 +1,25 @@
-"use client";
-
-import { useFormStatus } from "react-dom";
-import { Heart } from "lucide-react";
-import colors from "tailwindcss/colors";
+import { LikeButtonClient } from "./like-button.client";
+import { getIsLiked, getSession, likePost } from "@/services";
 
 type LikeButtonProps = {
-  isLiked: boolean;
+  slug: string;
 };
 
-const LikeButton = ({ isLiked }: LikeButtonProps) => {
-  const { pending } = useFormStatus();
+const LikeButton = async ({ slug }: LikeButtonProps) => {
+  const sessionId = await getSession();
+  const isLiked = await getIsLiked(slug, sessionId);
 
-  const red = colors.red[500];
+  const handleLikePost = async () => {
+    "use server";
+    await likePost(slug, sessionId);
+  };
 
   return (
-    <button type="submit">
-      {pending && <span className="absolute right-[calc(100%+2px)]">...</span>}
-      <Heart fill={isLiked ? red : "transparent"} color={red} />
-    </button>
+    <div className="relative z-heart-like inline-flex">
+      <form action={handleLikePost}>
+        <LikeButtonClient isLiked={isLiked} />
+      </form>
+    </div>
   );
 };
 

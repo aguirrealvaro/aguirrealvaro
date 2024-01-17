@@ -10,7 +10,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- suspense
 - move prisma to lib
 
 ### Posts:
