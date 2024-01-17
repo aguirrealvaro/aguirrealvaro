@@ -37,14 +37,19 @@ const Logo = () => {
           <ContextMenu.Group>
             <ContextMenu.Item
               onSelect={() => router.push("/")}
-              className="flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary"
+              className={cn(
+                "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
+                "cursor-pointer"
+              )}
             >
               <HomeIcon size={16} />
               Home Page
             </ContextMenu.Item>
             <ContextMenu.Item
               onSelect={handleCopySvg}
-              className="flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary"
+              className={cn(
+                "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary"
+              )}
             >
               <Copy size={16} />
               Copy Logo as SVG
@@ -56,7 +61,10 @@ const Logo = () => {
           </ContextMenu.Label>
           <ContextMenu.Item
             onSelect={clickHandle}
-            className="flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary"
+            className={cn(
+              "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
+              "cursor-pointer"
+            )}
           >
             <Component size={16} />
             UI Kit
