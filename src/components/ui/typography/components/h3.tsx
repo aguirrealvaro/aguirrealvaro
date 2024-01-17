@@ -8,7 +8,9 @@ type H3Props = {
 
 const H3 = ({ children, className }: H3Props) => {
   return (
-    <h3 className={cn("text-2xl font-semibold text-text-heading", className)}>{children}</h3>
+    <h3 className={cn("text-2xl font-semibold text-text-heading text-balance", className)}>
+      {children}
+    </h3>
   );
 };
 

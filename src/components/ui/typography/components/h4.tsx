@@ -7,7 +7,11 @@ type H4Props = {
 };
 
 const H4 = ({ children, className }: H4Props) => {
-  return <h4 className={cn("font-semibold text-text-heading", className)}>{children}</h4>;
+  return (
+    <h4 className={cn("font-semibold text-text-heading text-balance", className)}>
+      {children}
+    </h4>
+  );
 };
 
 export { H4 };
