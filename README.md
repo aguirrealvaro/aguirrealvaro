@@ -13,9 +13,9 @@ Deployed to Vercel & PlanetScale
 
 ### RSC:
 
-- loadings
 - revalidate
-- promise all
+- loading server action
+- suspenses (metrics.tsx, client-like-button.tsx)
 
 ### Posts:
 

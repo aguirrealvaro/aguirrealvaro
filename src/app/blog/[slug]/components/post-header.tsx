@@ -11,9 +11,12 @@ type PostHeaderProps = {
 };
 
 const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderProps) => {
-  const post = await getIncrementedPost(slug);
   const sessionId = await getSession();
-  const isLiked = await getIsLiked(slug, sessionId);
+
+  const [post, isLiked] = await Promise.all([
+    getIncrementedPost(slug),
+    getIsLiked(slug, sessionId),
+  ]);
 
   const { dateString, formattedDate } = formatDate(publishedAt);
 
