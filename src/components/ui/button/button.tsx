@@ -9,9 +9,6 @@ const getButtonVariants = cva(
     "border border-transparent",
     "transition",
     "disabled:cursor-not-allowed",
-    "disabled:border-disabled-primary disabled:bg-disabled-primary disabled:text-disabled-secondary",
-    // It should not be necessary since disabled-primary and disabled-secondary are CSS Variables that depends on theme
-    "dark:disabled:border-disabled-primary dark:disabled:bg-disabled-primary dark:disabled:text-disabled-secondary",
   ],
   {
     variants: {
@@ -30,12 +27,35 @@ const getButtonVariants = cva(
         rectangle: "rounded-none",
       },
       variant: {
-        primary: "",
-        secondary: "border-transparent",
-        outlined: "bg-transparent",
-        ghost: "bg-transparent",
-        link: "bg-transparent hover:underline",
-        plain: "h-auto w-auto rounded-none border-none bg-none p-0",
+        primary: [
+          "disabled:border-disabled-primary disabled:bg-disabled-primary disabled:text-disabled-secondary",
+          "dark:disabled:border-disabled-primary dark:disabled:bg-disabled-primary dark:disabled:text-disabled-secondary",
+        ],
+        secondary: [
+          "border-transparent",
+          "disabled:border-disabled-primary disabled:bg-disabled-primary disabled:text-disabled-secondary",
+          "dark:disabled:border-disabled-primary dark:disabled:bg-disabled-primary dark:disabled:text-disabled-secondary",
+        ],
+        outlined: [
+          "bg-transparent",
+          "disabled:border-disabled-primary disabled:text-disabled-secondary",
+          "dark:disabled:border-disabled-primary dark:disabled:text-disabled-secondary",
+        ],
+        ghost: [
+          "bg-transparent",
+          "disabled:text-disabled-primary",
+          "dark:disabled:text-disabled-primary",
+        ],
+        link: [
+          "bg-transparent enabled:hover:underline",
+          "disabled:text-disabled-primary",
+          "dark:disabled:text-disabled-primary",
+        ],
+        plain: [
+          "h-auto w-auto rounded-none border-none bg-none p-0",
+          "disabled:text-disabled-primary",
+          "dark:disabled:text-disabled-primary",
+        ],
       },
       colorScheme: {
         neutral: "",
@@ -155,9 +175,9 @@ const getButtonVariants = cva(
         colorScheme: "neutral",
         className: [
           "border-neutral-200 text-neutral-600",
-          "hover:bg-neutral-100",
+          "enabled:hover:bg-neutral-100",
           "dark:border-neutral-600 dark:text-neutral-400",
-          "dark:hover:bg-neutral-700",
+          "enabled:dark:hover:bg-neutral-700",
         ],
       },
       {
@@ -206,9 +226,9 @@ const getButtonVariants = cva(
         colorScheme: "neutral",
         className: [
           "text-black",
-          "hover:bg-black/10",
+          "enabled:hover:bg-black/10",
           "dark:text-white",
-          "dark:hover:bg-white/10",
+          "enabled:dark:hover:bg-white/10",
         ],
       },
       {

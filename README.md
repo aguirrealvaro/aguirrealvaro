@@ -9,15 +9,8 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- button: enabled, disabled
 - context menu on logo: home page, copy svg
-- replace rq with server actions
-
-### Backlog:
-
-- disabled styles not applying for button and iconbutton
-- extra styles button
-- cached response
+- replace rq with server actions (fix cached response)
 
 ### Posts:
 
