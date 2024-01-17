@@ -9,7 +9,6 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- context menu on logo: home page, copy svg
 - image size
 - replace rq with server actions (fix cached response)
 
