@@ -11,11 +11,6 @@ Deployed to Vercel & PlanetScale
 
 - remove enabled? don't work when asChild is presenet
 
-### RSC:
-
-- try/catch
-- suspenses (metrics.tsx, client-like-button.tsx)
-
 ### Posts:
 
 - react query
