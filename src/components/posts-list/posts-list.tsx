@@ -1,14 +1,18 @@
-"use client";
-
 import Link from "next/link";
-import { usePosts } from "@/hooks";
+import { PostType } from "@/services/interfaces";
 import { formatDate } from "@/utils/format-date";
 import { allPosts } from "contentlayer/generated";
 
-const PostsList = () => {
+const getPosts = async (): Promise<PostType[]> => {
+  const response = await fetch("http://localhost:3000/api/post");
+  const posts = await response.json();
+  return posts;
+};
+
+const PostsList = async () => {
   const sortedPosts = allPosts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
-  const { posts, isFetching } = usePosts();
+  const posts = await getPosts();
 
   return (
     <ul>
@@ -18,12 +22,9 @@ const PostsList = () => {
 
         const relatedPost = posts?.find((post) => post.slug === slug);
 
-        const renderMetric = (metric: number | undefined) => {
-          if (isFetching) {
-            return "...";
-          } else {
-            return metric;
-          }
+        const renderMetrics = () => {
+          if (!relatedPost) return null;
+          return ` · ${relatedPost?.views} views · ${relatedPost?.likes.length} likes`;
         };
 
         if (process.env.NODE_ENV === "production" && !enabled) return null;
@@ -33,9 +34,8 @@ const PostsList = () => {
             <Link href={`/blog/${slug}`} className="flex flex-col py-4 transition">
               <h2 className="font-medium text-text-heading group-hover:underline">{title}</h2>
               <span className="text-text-secondary">
-                <time dateTime={dateString}>{formattedDate}</time> ·{" "}
-                {renderMetric(relatedPost?.views)} views ·{" "}
-                {renderMetric(relatedPost?.likes.length)} likes
+                <time dateTime={dateString}>{formattedDate}</time>
+                {renderMetrics()}
               </span>
             </Link>
           </li>
