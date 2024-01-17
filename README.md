@@ -20,6 +20,7 @@ Deployed to Vercel & PlanetScale
 - revalidate
 - delete hooks
 - move functions to "services"
+- get slug from search params
 
 ### Posts:
 
