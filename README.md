@@ -8,6 +8,11 @@ Deployed to Vercel & PlanetScale
 
 [aguirrealvaro.dev](https://aguirrealvaro.dev)
 
+### To Do:
+
+- suspense
+- move prisma to lib
+
 ### Posts:
 
 - react query

@@ -1,7 +1,11 @@
+import { Suspense } from "react";
 import { LikeButton } from "./like-button";
+import { Metrics } from "@/app/blog/[slug]/components/metrics";
 import { Typography } from "@/components/ui";
-import { getIncrementedPost, getSession, getIsLiked, likePost } from "@/services";
+import { Skeleton } from "@/components/ui/skeleton";
+import { getSession, getIsLiked, likePost } from "@/services";
 import { formatDate } from "@/utils/format-date";
+export { Metrics } from "./metrics";
 
 type PostHeaderProps = {
   slug: string;
@@ -12,11 +16,7 @@ type PostHeaderProps = {
 
 const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderProps) => {
   const sessionId = await getSession();
-
-  const [post, isLiked] = await Promise.all([
-    getIncrementedPost(slug),
-    getIsLiked(slug, sessionId),
-  ]);
+  const isLiked = await getIsLiked(slug, sessionId);
 
   const { dateString, formattedDate } = formatDate(publishedAt);
 
@@ -28,9 +28,11 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
   return (
     <div className="mb-8 flex items-center justify-between">
       <div className="mr-4">
-        <span className="text-text-secondary">
-          <time dateTime={dateString}>{formattedDate}</time> · {post.views} views ·{" "}
-          {post.likes.length} likes
+        <span className="flex items-center gap-2 text-text-secondary">
+          <time dateTime={dateString}>{formattedDate}</time>
+          <Suspense fallback={<Skeleton className="h-5 w-32" />}>
+            <Metrics slug={slug} />
+          </Suspense>
         </span>
         <Typography.H2 className="mb-1">{title}</Typography.H2>
         <p className="text-text-secondary">{description}</p>
