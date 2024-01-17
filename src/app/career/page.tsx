@@ -13,7 +13,7 @@ const Career = () => {
               image="/trafilea.jpg"
               company="Trafilea"
               fromDate="2023-07-15"
-              description="Currently working"
+              description="Working as part of the checkout team for various e-commerce platforms."
             />
             <Separator />
             <Item
