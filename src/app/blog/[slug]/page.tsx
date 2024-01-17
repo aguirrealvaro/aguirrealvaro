@@ -1,4 +1,4 @@
-import { PostWrapper } from "./components";
+import { PostContent, PostHeader } from "./components";
 import { PageContainer, Wrapper } from "@/components";
 import { allPosts } from "contentlayer/generated";
 
@@ -9,10 +9,22 @@ type PostProps = {
 };
 
 const Post = ({ params }: PostProps) => {
+  const pagePost = allPosts.find((post) => post.slug === params.slug);
+
+  if (!pagePost) return null;
+
+  const { title, publishedAt, description, body } = pagePost;
+
   return (
     <PageContainer>
       <Wrapper>
-        <PostWrapper slug={params.slug} />
+        <PostHeader
+          slug={params.slug}
+          title={title}
+          publishedAt={publishedAt}
+          description={description}
+        />
+        <PostContent content={body.code} />
       </Wrapper>
     </PageContainer>
   );

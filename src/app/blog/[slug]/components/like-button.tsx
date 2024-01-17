@@ -5,7 +5,7 @@ import colors from "tailwindcss/colors";
 
 type LikeButtonProps = {
   isLiked: boolean;
-  handleLikePost: () => void;
+  handleLikePost: () => Promise<void>;
 };
 
 const LikeButton = ({ isLiked, handleLikePost }: LikeButtonProps) => {

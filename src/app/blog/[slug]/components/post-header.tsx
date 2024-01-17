@@ -1,6 +1,6 @@
 import { LikeButton } from "@/app/blog/[slug]/components";
 import { Typography } from "@/components/ui";
-import { getIncrementedPost, getSession, likePost } from "@/lib";
+import { getIncrementedPost, getSession } from "@/lib";
 import { getIsLiked } from "@/lib/get-is-liked";
 import { formatDate } from "@/utils/format-date";
 import prisma from "@/utils/prisma";
@@ -20,6 +20,34 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
 
   const { dateString, formattedDate } = formatDate(publishedAt);
 
+  const handleLikePost = async () => {
+    "use server";
+
+    // eslint-disable-next-line no-console
+    console.log("handleLikePost");
+
+    const post = await prisma.post.findUnique({ where: { slug } });
+    if (!post) {
+      throw new Error("Post does not exists");
+    }
+
+    const like = await prisma.likes.findFirst({
+      where: { sessionId: sessionId, postId: post.id },
+    });
+    if (like) {
+      await prisma.likes.delete({
+        where: { id: like.id },
+      });
+    }
+
+    await prisma.likes.create({
+      data: {
+        sessionId: sessionId,
+        postId: post.id,
+      },
+    });
+  };
+
   return (
     <div className="mb-8 flex items-center justify-between">
       <div className="mr-4">
@@ -30,35 +58,7 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
         <Typography.H2 className="mb-1">{title}</Typography.H2>
         <p className="text-text-secondary">{description}</p>
       </div>
-      <LikeButton
-        isLiked={isLiked}
-        handleLikePost={async () => {
-          "use server";
-          console.log("here1");
-          const post = await prisma.post.findUnique({ where: { slug } });
-
-          if (!post) {
-            throw new Error("Post does not exists");
-          }
-
-          const like = await prisma.likes.findFirst({
-            where: { sessionId: sessionId, postId: post.id },
-          });
-
-          if (like) {
-            await prisma.likes.delete({
-              where: { id: like.id },
-            });
-          }
-
-          await prisma.likes.create({
-            data: {
-              sessionId: sessionId,
-              postId: post.id,
-            },
-          });
-        }}
-      />
+      <LikeButton isLiked={isLiked} handleLikePost={handleLikePost} />
     </div>
   );
 };

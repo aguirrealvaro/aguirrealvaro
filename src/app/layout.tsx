@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { Navbar, Footer, ErrorBoundary } from "@/components";
-import { QueryProvider, ThemeProvider } from "@/providers";
+import { ThemeProvider } from "@/providers";
 import { cn } from "@/utils/cn";
 
 const raleway = Raleway({
@@ -30,16 +30,14 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         )}
       >
         <ErrorBoundary>
-          <QueryProvider>
-            <ThemeProvider>
-              <h1 className="sr-only">Alvaro Aguirre</h1>
-              <div className="flex min-h-screen flex-col">
-                <Navbar />
-                <main className="flex-1">{children}</main>
-                <Footer />
-              </div>
-            </ThemeProvider>
-          </QueryProvider>
+          <ThemeProvider>
+            <h1 className="sr-only">Alvaro Aguirre</h1>
+            <div className="flex min-h-screen flex-col">
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </ThemeProvider>
         </ErrorBoundary>
       </body>
     </html>

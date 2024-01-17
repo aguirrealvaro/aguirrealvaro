@@ -14,12 +14,7 @@ Deployed to Vercel & PlanetScale
 ### RSC:
 
 - replace prisma object
-- replace usesinglepost 
-- remove postwrapper
-- review useclients
 - revalidate
-- delete hooks
-- move functions to "services"
 - get slug from search params
 
 ### Posts:
