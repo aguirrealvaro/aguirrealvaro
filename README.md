@@ -13,7 +13,6 @@ Deployed to Vercel & PlanetScale
 
 ### RSC:
 
-- revalidate
 - loading server action
 - suspenses (metrics.tsx, client-like-button.tsx)
 

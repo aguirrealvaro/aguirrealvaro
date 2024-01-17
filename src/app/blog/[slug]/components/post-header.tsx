@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { LikeButton } from "./like-button";
 import { Typography } from "@/components/ui";
 import { getIncrementedPost, getSession, getIsLiked, likePost } from "@/lib";
@@ -23,6 +24,7 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
   const handleLikePost = async () => {
     "use server";
     await likePost(slug, sessionId);
+    revalidatePath(`/blog/${slug}`);
   };
 
   return (
