@@ -17,5 +17,5 @@ export const NAVIGATION_LINKS: NavigationLink[] = [
   { name: "Career", href: "/career" },
   { name: "Blog", href: "/blog" },
   { name: "Creating", href: "/creating" },
-  { name: "Resume", externalHref: "https://cv.aguirrealvaro.vercel.app" },
+  { name: "Resume", externalHref: "https://cv.aguirrealvaro.dev" },
 ];
