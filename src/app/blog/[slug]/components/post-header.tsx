@@ -1,7 +1,7 @@
 import { revalidatePath } from "next/cache";
 import { LikeButton } from "./like-button";
 import { Typography } from "@/components/ui";
-import { getIncrementedPost, getSession, getIsLiked, likePost } from "@/lib";
+import { getIncrementedPost, getSession, getIsLiked, likePost } from "@/services";
 import { formatDate } from "@/utils/format-date";
 
 type PostHeaderProps = {
