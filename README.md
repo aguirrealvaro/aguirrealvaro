@@ -13,7 +13,6 @@ Deployed to Vercel & PlanetScale
 
 ### RSC:
 
-- replace prisma object
 - revalidate
 - loadings
 - get slug from search params
