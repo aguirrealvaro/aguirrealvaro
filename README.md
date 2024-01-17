@@ -8,10 +8,6 @@ Deployed to Vercel & PlanetScale
 
 [aguirrealvaro.dev](https://aguirrealvaro.dev)
 
-### To Do:
-
-- fix revalidates: use fetch assigning tags
-
 ### Posts:
 
 - react query

@@ -20,6 +20,9 @@ type RootLayoutProps = {
   children: ReactNode;
 };
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>

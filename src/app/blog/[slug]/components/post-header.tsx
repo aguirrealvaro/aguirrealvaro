@@ -1,4 +1,3 @@
-import { revalidatePath } from "next/cache";
 import { LikeButton } from "./like-button";
 import { Typography } from "@/components/ui";
 import { getIncrementedPost, getSession, getIsLiked, likePost } from "@/services";
@@ -10,8 +9,6 @@ type PostHeaderProps = {
   publishedAt: string;
   description: string;
 };
-
-export const dynamic = "force-dynamic";
 
 const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderProps) => {
   const sessionId = await getSession();
@@ -26,7 +23,6 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
   const handleLikePost = async () => {
     "use server";
     await likePost(slug, sessionId);
-    revalidatePath(`/blog/${slug}`);
   };
 
   return (
