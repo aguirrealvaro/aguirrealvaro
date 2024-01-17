@@ -1,4 +1,4 @@
-import { PostType } from "@/services/interfaces";
+import { PostType } from "@/types";
 import prisma from "@/utils/prisma";
 
 export const getIncrementedPost = async (slug: string): Promise<PostType> => {
