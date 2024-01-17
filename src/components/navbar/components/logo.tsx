@@ -1,18 +1,18 @@
 import * as ContextMenu from "@radix-ui/react-context-menu";
 import { Component, Copy, HomeIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { Svg } from ".";
 import { cn } from "@/utils/cn";
 
 const Logo = () => {
   const router = useRouter();
 
-  const handleCopySvg = () => {
+  const copySvg = () => {
     navigator.clipboard.writeText("wip :)");
   };
 
-  const clickHandle = () => {
+  const openUiKit = () => {
     window.open("https://ui-kit7.vercel.app", "_blank");
   };
 
@@ -20,7 +20,7 @@ const Logo = () => {
     <ContextMenu.Root modal={false}>
       <ContextMenu.Trigger asChild>
         <Link href="/">
-          <Image alt="aguirrealvaro logo" src="/aa-logo.svg" width={40} height={40} />
+          <Svg />
         </Link>
       </ContextMenu.Trigger>
       <ContextMenu.Portal>
@@ -45,7 +45,7 @@ const Logo = () => {
               Home Page
             </ContextMenu.Item>
             <ContextMenu.Item
-              onSelect={handleCopySvg}
+              onSelect={copySvg}
               className={cn(
                 "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary"
               )}
@@ -59,7 +59,7 @@ const Logo = () => {
             Projects
           </ContextMenu.Label>
           <ContextMenu.Item
-            onSelect={clickHandle}
+            onSelect={openUiKit}
             className={cn(
               "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
               "cursor-pointer"
