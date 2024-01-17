@@ -1,9 +1,7 @@
 import { LikeButton } from "@/app/blog/[slug]/components";
 import { Typography } from "@/components/ui";
-import { getIncrementedPost, getSession } from "@/lib";
-import { getIsLiked } from "@/lib/get-is-liked";
+import { getIncrementedPost, getSession, getIsLiked, likePost } from "@/lib";
 import { formatDate } from "@/utils/format-date";
-import prisma from "@/utils/prisma";
 
 type PostHeaderProps = {
   slug: string;
@@ -22,28 +20,7 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
 
   const handleLikePost = async () => {
     "use server";
-
-    const post = await prisma.post.findUnique({ where: { slug } });
-    if (!post) {
-      throw new Error("Post does not exists");
-    }
-
-    const like = await prisma.likes.findFirst({
-      where: { sessionId: sessionId, postId: post.id },
-    });
-
-    if (like) {
-      await prisma.likes.delete({
-        where: { id: like.id },
-      });
-    } else {
-      await prisma.likes.create({
-        data: {
-          sessionId: sessionId,
-          postId: post.id,
-        },
-      });
-    }
+    await likePost(slug, sessionId);
   };
 
   return (
