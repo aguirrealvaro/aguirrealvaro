@@ -9,6 +9,7 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
+- add badges to projects
 - context menu on logo: home page, copy svg
 - replace rq with server actions (fix cached response)
 
