@@ -1,4 +1,4 @@
-import { LikeButton } from "@/app/blog/[slug]/components";
+import { LikeButton } from "./like-button";
 import { Typography } from "@/components/ui";
 import { getIncrementedPost, getSession, getIsLiked, likePost } from "@/lib";
 import { formatDate } from "@/utils/format-date";

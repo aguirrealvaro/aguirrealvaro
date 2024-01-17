@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PostType } from "@/services/interfaces";
+import { PostType } from "@/types";
 import { formatDate } from "@/utils/format-date";
 import prisma from "@/utils/prisma";
 import { allPosts } from "contentlayer/generated";
