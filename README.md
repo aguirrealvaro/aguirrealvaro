@@ -17,5 +17,6 @@ Deployed to Vercel & PlanetScale
 - react query
 - z index
 - keyboard interactions
+- stack
 - precommit + lint staged with tsc + lint
 - styled components vs tailwind
