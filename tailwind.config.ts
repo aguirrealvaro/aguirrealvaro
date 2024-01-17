@@ -53,6 +53,7 @@ const config: Config = {
       zIndex: {
         "heart-like": "1",
         navbar: "2",
+        "context-menu": "3",
       },
       flex: {
         "2": "2 2 0%",
