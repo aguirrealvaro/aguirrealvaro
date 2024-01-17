@@ -1,8 +1,8 @@
 # aguirrealvaro.dev
 
-Personal website & blog
+Personal Website & Blog
 
-Made with Next, Typescript, Tailwind, Prisma, React Query & MDX
+Made with Next, Prisma, React Query & MDX
 Deployed to Vercel & PlanetScale
 
 [aguirrealvaro.dev](https://aguirrealvaro.dev)
@@ -10,6 +10,7 @@ Deployed to Vercel & PlanetScale
 ### To Do:
 
 - replace rq with server actions (fix cached response)
+- remove enabled? don't work when asChild is presenet
 
 ### Posts:
 
