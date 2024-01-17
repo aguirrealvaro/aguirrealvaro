@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
 import prisma from "@/utils/prisma";
 
-type ParamsType = {
+type Params = {
   params: {
     slug: string;
   };
 };
 
-export async function GET(_: Request, { params }: ParamsType) {
+export async function GET(_: Request, { params }: Params) {
   const { slug } = params;
 
   const postExist = await prisma.post.findUnique({ where: { slug } });
@@ -28,7 +28,7 @@ export async function GET(_: Request, { params }: ParamsType) {
   return NextResponse.json(post);
 }
 
-export async function PUT(_: Request, { params }: ParamsType) {
+export async function PUT(_: Request, { params }: Params) {
   const { slug } = params;
 
   const postExist = await prisma.post.findUnique({ where: { slug } });

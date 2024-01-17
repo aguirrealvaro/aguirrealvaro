@@ -14,13 +14,13 @@ const getSession = () => {
   return currentSessionId;
 };
 
-type ParamsType = {
+type Params = {
   params: {
     slug: string;
   };
 };
 
-export async function GET(_: Request, { params }: ParamsType) {
+export async function GET(_: Request, { params }: Params) {
   const { slug } = params;
 
   const currentSessionId = getSession();
@@ -40,7 +40,7 @@ export async function GET(_: Request, { params }: ParamsType) {
   return NextResponse.json(userHasLiked);
 }
 
-export async function POST(_: Request, { params }: ParamsType) {
+export async function POST(_: Request, { params }: Params) {
   const currentSessionId = getSession();
 
   const { slug } = params;

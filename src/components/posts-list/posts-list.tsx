@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { PostType } from "@/types";
+import { PostWithLikes } from "@/types";
 import { formatDate } from "@/utils/format-date";
 import prisma from "@/utils/prisma";
 import { allPosts } from "contentlayer/generated";
 
-const getPosts = async (): Promise<PostType[]> => {
+const getPosts = async (): Promise<PostWithLikes[]> => {
   const posts = await prisma.post.findMany({
     include: { likes: true },
   });

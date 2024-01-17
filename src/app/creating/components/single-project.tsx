@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Badge, Button, Typography } from "@/components/ui";
 import { cn } from "@/utils/cn";
 
-type SingleProjectType = {
+type SingleProjectProps = {
   title: string;
   description: string;
   image: string;
@@ -20,7 +20,7 @@ const SingleProject = ({
   codeLink,
   imgClassname,
   technologies,
-}: SingleProjectType) => {
+}: SingleProjectProps) => {
   return (
     <div>
       <Image
