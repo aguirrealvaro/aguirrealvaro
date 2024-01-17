@@ -3,7 +3,6 @@ import { Component, Copy, HomeIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import SVG from "../assets/aa-logo.svg";
 import { cn } from "@/utils/cn";
 
 const Logo = () => {
@@ -21,7 +20,7 @@ const Logo = () => {
     <ContextMenu.Root modal={false}>
       <ContextMenu.Trigger asChild>
         <Link href="/">
-          <Image alt="aguirrealvaro logo" src={SVG} width={40} height={40} />
+          <Image alt="aguirrealvaro logo" src="/aa-logo.svg" width={40} height={40} />
         </Link>
       </ContextMenu.Trigger>
       <ContextMenu.Portal>
