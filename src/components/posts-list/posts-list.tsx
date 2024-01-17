@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { PostType } from "@/services/interfaces";
 import { formatDate } from "@/utils/format-date";
+import prisma from "@/utils/prisma";
 import { allPosts } from "contentlayer/generated";
 
 const getPosts = async (): Promise<PostType[]> => {
-  const response = await fetch("http://localhost:3000/api/post");
-  const posts = await response.json();
+  const posts = await prisma.post.findMany({
+    include: { likes: true },
+  });
   return posts;
 };
 

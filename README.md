@@ -9,8 +9,14 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- replace rq with server actions (fix cached response)
 - remove enabled? don't work when asChild is presenet
+
+### RSC:
+
+- replace prisma object
+- replace usesinglepost (remove postwrapper, fetch on post-header)
+- revalidate
+- delete hooks, api?
 
 ### Posts:
 
