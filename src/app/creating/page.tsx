@@ -18,6 +18,7 @@ const Creating = () => {
             projectLink="https://ui-kit7.vercel.app"
             codeLink="https://github.com/aguirrealvaro/ui-kit"
             imgClassname="object-cover"
+            technologies={["React", "CSS-in-JS", "Storybook"]}
           />
           <SingleProject
             title="aguirrealvaro.dev"
@@ -26,6 +27,7 @@ const Creating = () => {
             projectLink="https://www.aguirrealvaro.dev/"
             codeLink="https://github.com/aguirrealvaro/aguirrealvaro"
             imgClassname="object-contain bg-black"
+            technologies={["Next", "Prisma", "ReactQuery", "MDX"]}
           />
         </div>
       </Wrapper>

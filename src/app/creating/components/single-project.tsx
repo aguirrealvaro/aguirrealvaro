@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Typography } from "@/components/ui";
+import { Badge, Button, Typography } from "@/components/ui";
 import { cn } from "@/utils/cn";
 
 type SingleProjectType = {
@@ -9,6 +9,7 @@ type SingleProjectType = {
   projectLink: string;
   codeLink: string;
   imgClassname?: string;
+  technologies: string[];
 };
 
 const SingleProject = ({
@@ -18,6 +19,7 @@ const SingleProject = ({
   projectLink,
   codeLink,
   imgClassname,
+  technologies,
 }: SingleProjectType) => {
   return (
     <div>
@@ -31,6 +33,11 @@ const SingleProject = ({
         />
       </div>
       <Typography.H4 className="mb-2">{title}</Typography.H4>
+      <div className="mb-2 flex gap-2">
+        {technologies.map((technology) => {
+          return <Badge key={technology}>{technology}</Badge>;
+        })}
+      </div>
       <Typography.Paragraph className="mb-4 text-text-secondary">
         {description}
       </Typography.Paragraph>
