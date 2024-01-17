@@ -9,7 +9,7 @@ export const likePost = async (slug: string, sessionId: string) => {
     // after liking the post, i am doing revalidatePath(`/blog/${slug}`)
     // so, the whole path is being revalidating, and the views are being incremented again
     // to avoid this, i am decrementing the views by 1 to equalize the views
-    // POSSIBLE SOLUTION:
+    // POSSIBLE SOLUTION (see `revalidate` branch)
     // split getIncrementedView to incrementView and getSinglePost
     // assingn a tag to getSinglePost, and use revalidateTag instead of revalidatePath
     // for now, the only way to assign a tag to a prisma query (not fetch) is unstable_cache (https://github.com/vercel/next.js/discussions/49525)
