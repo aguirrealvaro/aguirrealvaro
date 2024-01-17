@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Badge, Button, Typography } from "@/components/ui";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 
 type SingleProjectProps = {
   title: string;

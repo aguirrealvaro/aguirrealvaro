@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { MainMenu, ThemeToggle, MediaLinks, Logo, Burger } from "./components";
 import { Wrapper } from "@/components";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 
 const Navbar = () => {
   const containerRef = useRef<HTMLDivElement>(null);

@@ -3,8 +3,8 @@ import { ReactNode } from "react";
 import { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { Navbar, Footer, ErrorBoundary } from "@/components";
+import { cn } from "@/lib/cn";
 import { ThemeProvider } from "@/providers";
-import { cn } from "@/utils/cn";
 
 const raleway = Raleway({
   subsets: ["latin"],

@@ -1,7 +1,7 @@
 import { createHash } from "crypto";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
-import prisma from "@/utils/prisma";
+import prisma from "@/lib/prisma";
 
 const getSession = () => {
   const headersList = headers();

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Typography } from "@/components/ui";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 import { formatDate } from "@/utils/format-date";
 
 type ItemProps = {

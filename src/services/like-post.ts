@@ -1,5 +1,5 @@
 import { revalidatePath } from "next/cache";
-import prisma from "@/utils/prisma";
+import prisma from "@/lib/prisma";
 
 export const likePost = async (slug: string, sessionId: string) => {
   const post = await prisma.post.update({

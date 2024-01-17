@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, forwardRef } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 
 // TO DO: remove enabled: styles are not applying when asChild is present
 

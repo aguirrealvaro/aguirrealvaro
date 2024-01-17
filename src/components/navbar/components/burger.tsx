@@ -8,7 +8,7 @@ import { IconButton, Link } from "@/components/ui";
 import { NAVIGATION_LINKS } from "@/config";
 import { DEFAULT_ICON_SIZE } from "@/constants";
 import { useDisableScroll } from "@/hooks";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 import { getIsExternalLink } from "@/utils/get-is-external-link";
 
 type BurgerProps = {

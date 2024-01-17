@@ -1,7 +1,7 @@
 import { AnchorHTMLAttributes, ReactNode, forwardRef } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { ExternalLink } from "lucide-react";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 
 const getLinkVariants = cva(undefined, {
   variants: {

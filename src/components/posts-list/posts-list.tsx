@@ -1,7 +1,7 @@
 import Link from "next/link";
+import prisma from "@/lib/prisma";
 import { PostWithLikes } from "@/types";
 import { formatDate } from "@/utils/format-date";
-import prisma from "@/utils/prisma";
 import { allPosts } from "contentlayer/generated";
 
 const getPosts = async (): Promise<PostWithLikes[]> => {

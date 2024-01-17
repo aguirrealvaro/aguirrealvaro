@@ -3,7 +3,7 @@ import { Component, Copy, HomeIcon } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Svg } from ".";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 
 const Logo = () => {
   const router = useRouter();

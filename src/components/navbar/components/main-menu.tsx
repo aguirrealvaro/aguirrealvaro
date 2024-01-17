@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Link as ExternalLink } from "@/components/ui";
 import { NAVIGATION_LINKS } from "@/config";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/cn";
 import { getIsExternalLink } from "@/utils/get-is-external-link";
 
 const MainMenu = () => {
