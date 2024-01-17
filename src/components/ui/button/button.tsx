@@ -3,6 +3,8 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/utils/cn";
 
+// TO DO: remove enabled: styles are not applying when asChild is present
+
 const getButtonVariants = cva(
   [
     "inline-flex items-center justify-center gap-2",

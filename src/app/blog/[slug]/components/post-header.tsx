@@ -11,6 +11,8 @@ type PostHeaderProps = {
   description: string;
 };
 
+export const dynamic = "force-dynamic";
+
 const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderProps) => {
   const sessionId = await getSession();
 
