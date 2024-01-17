@@ -9,7 +9,7 @@ Deployed to Vercel & PlanetScale
 
 ### To Do:
 
-- button: enabled, colorschemes, disabled, greys
+- button: enabled, disabled
 - context menu on logo: home page, copy svg
 - replace rq with server actions
 
