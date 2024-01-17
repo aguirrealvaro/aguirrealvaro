@@ -15,7 +15,6 @@ Deployed to Vercel & PlanetScale
 
 - revalidate
 - loadings
-- get slug from search params
 
 ### Posts:
 

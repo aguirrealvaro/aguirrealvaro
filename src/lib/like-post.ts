@@ -1,8 +1,6 @@
 import prisma from "@/utils/prisma";
 
 export const likePost = async (slug: string, sessionId: string) => {
-  "use server";
-
   const post = await prisma.post.findUnique({ where: { slug } });
   if (!post) {
     throw new Error("Post does not exists");
