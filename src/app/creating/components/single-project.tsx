@@ -23,15 +23,13 @@ const SingleProject = ({
 }: SingleProjectType) => {
   return (
     <div>
-      <div>
-        <Image
-          src={image}
-          alt={`${title} Picture`}
-          width={600}
-          height={300}
-          className={cn("mb-4 h-52 rounded shadow-lg md:w-full", imgClassname)}
-        />
-      </div>
+      <Image
+        src={image}
+        alt={`${title} Picture`}
+        width={600}
+        height={300}
+        className={cn("mb-4 h-52 rounded shadow-lg md:w-full", imgClassname)}
+      />
       <Typography.H4 className="mb-2">{title}</Typography.H4>
       <div className="mb-2 flex gap-2">
         {technologies.map((technology) => {
