@@ -27,7 +27,7 @@ const Creating = () => {
             projectLink="https://www.aguirrealvaro.dev/"
             codeLink="https://github.com/aguirrealvaro/aguirrealvaro"
             imgClassname="object-contain bg-black"
-            technologies={["Next", "Prisma", "ReactQuery", "MDX"]}
+            technologies={["Next", "RSC", "Server Actions", "Prisma", "MDX"]}
           />
         </div>
       </Wrapper>
