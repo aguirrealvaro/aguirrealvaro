@@ -14,7 +14,7 @@ const LikeButtonClient = ({ isLiked }: LikeButtonClientProps) => {
 
   return (
     <>
-      <button type="submit">
+      <button type="submit" disabled={pending} aria-disabled={pending}>
         <Heart fill={isLiked ? red : "transparent"} color={red} />
       </button>
       {pending && <span className="absolute right-[calc(100%+2px)]">...</span>}

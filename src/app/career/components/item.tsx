@@ -26,7 +26,7 @@ const Item = ({
   const parsedToDate = toDate ? formatDate(toDate, { showDay: false }) : "";
 
   return (
-    <div className={cn("flex-1", isSubItem ? "ml-8 mt-4" : "")}>
+    <div className={cn("flex-1", isSubItem ? "ml-8 mt-4 md:mt-4" : "")}>
       <div className="flex items-center gap-4">
         <Image
           src={image}
