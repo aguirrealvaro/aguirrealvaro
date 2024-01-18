@@ -21,7 +21,7 @@ We will apply the following styles
 
 ```css title="styles.css"
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -30,6 +30,9 @@ main {
   flex: 1;
 }
 ```
+
+We use `min-height: 100dvh;` so that the body takes the entire height of the viewport, which changes as the browser UI expands or contracts.
+This is a new unit that replace `100vh` which fix the height for mobile heights.
 
 When setting `flex-direction: column` on the body, the elements stack vertically. For main, we will apply `flex: 1`, which means it will automatically occupy all the remaining available space in the column after space has been allocated to other elements, such as the `header` and `footer`.
 
