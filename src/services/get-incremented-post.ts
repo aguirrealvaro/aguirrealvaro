@@ -1,5 +1,5 @@
 import prisma from "@/lib/prisma";
-import { PostWithLikes } from "@/types";
+import type { PostWithLikes } from "@/types";
 
 // get post with the incremented view
 export const getIncrementedPost = async (slug: string): Promise<PostWithLikes> => {

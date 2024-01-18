@@ -1,5 +1,7 @@
-import { AnchorHTMLAttributes, ReactNode, forwardRef } from "react";
-import { VariantProps, cva } from "class-variance-authority";
+import type { AnchorHTMLAttributes, ReactNode } from "react";
+import { forwardRef } from "react";
+import type { VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/cn";
 

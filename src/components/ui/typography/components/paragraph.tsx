@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode, useEffect } from "react";
 import { cn } from "@/lib/cn";
 
 type ParagraphProps = {

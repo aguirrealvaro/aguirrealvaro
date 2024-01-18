@@ -1,6 +1,6 @@
 import Link from "next/link";
 import prisma from "@/lib/prisma";
-import { PostWithLikes } from "@/types";
+import type { PostWithLikes } from "@/types";
 import { formatDate } from "@/utils/format-date";
 import { allPosts } from "contentlayer/generated";
 
