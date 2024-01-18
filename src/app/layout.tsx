@@ -35,7 +35,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <ErrorBoundary>
           <ThemeProvider>
             <h1 className="sr-only">Alvaro Aguirre</h1>
-            <div className="flex min-h-screen flex-col">
+            <div className="flex h-dvh flex-col">
               <Navbar />
               <main className="flex-1">{children}</main>
               <Footer />
