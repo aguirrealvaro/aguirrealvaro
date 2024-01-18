@@ -5,7 +5,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/cn";
 
 const getIconButtonVariants = cva(
-  ["flex rounded", "transition enabled:hover:bg-hover-primary", "disabled:cursor-not-allowed"],
+  [
+    "flex rounded",
+    "transition hover:bg-hover-primary",
+    "disabled:cursor-not-allowed",
+    "disabled:hover:bg-transparent",
+  ],
   {
     variants: {
       size: {
