@@ -20,14 +20,14 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
       <div className="mr-4">
         <span className="flex items-center gap-2 text-text-secondary">
           <time dateTime={dateString}>{formattedDate}</time>
-          <Suspense fallback={<Skeleton className="h-5 w-32" />}>
+          <Suspense fallback={<Skeleton className="h-4 w-32" />}>
             <Metrics slug={slug} />
           </Suspense>
         </span>
         <Typography.H2 className="mb-1">{title}</Typography.H2>
         <p className="text-text-secondary">{description}</p>
       </div>
-      <Suspense fallback={<Skeleton className="h-6 w-6" />}>
+      <Suspense fallback={<Skeleton className="h-4 w-6" />}>
         <LikeButton slug={slug} />
       </Suspense>
     </div>
