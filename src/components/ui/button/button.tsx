@@ -4,8 +4,6 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/cn";
 
-// TO DO: remove enabled: styles are not applying when asChild is present
-
 const getButtonVariants = cva(
   [
     "inline-flex items-center justify-center gap-2",
@@ -41,18 +39,18 @@ const getButtonVariants = cva(
         ],
         outlined: [
           "bg-transparent",
-          "disabled:border-disabled-primary disabled:text-disabled-secondary",
-          "dark:disabled:border-disabled-primary dark:disabled:text-disabled-secondary",
+          "disabled:border-disabled-primary disabled:text-disabled-secondary disabled:hover:bg-transparent",
+          "dark:disabled:border-disabled-primary dark:disabled:text-disabled-secondary dark:disabled:hover:bg-transparent",
         ],
         ghost: [
           "bg-transparent",
-          "disabled:text-disabled-primary",
-          "dark:disabled:text-disabled-primary",
+          "disabled:text-disabled-primary disabled:hover:bg-transparent",
+          "dark:disabled:text-disabled-primary dark:disabled:hover:bg-transparent",
         ],
         link: [
-          "bg-transparent enabled:hover:underline",
-          "disabled:text-disabled-primary",
-          "dark:disabled:text-disabled-primary",
+          "bg-transparent hover:underline",
+          "disabled:text-disabled-primary disabled:hover:no-underline",
+          "dark:disabled:text-disabled-primary dark:disabled:hover:no-underline",
         ],
         plain: [
           "h-auto w-auto rounded-none border-none bg-none p-0",
@@ -178,9 +176,9 @@ const getButtonVariants = cva(
         colorScheme: "neutral",
         className: [
           "border-neutral-200 text-neutral-600",
-          "enabled:hover:bg-neutral-100",
+          "hover:bg-neutral-100",
           "dark:border-neutral-600 dark:text-neutral-400",
-          "enabled:dark:hover:bg-neutral-700",
+          "dark:hover:bg-neutral-700",
         ],
       },
       {
@@ -229,9 +227,9 @@ const getButtonVariants = cva(
         colorScheme: "neutral",
         className: [
           "text-black",
-          "enabled:hover:bg-black/10",
+          "hover:bg-black/10",
           "dark:text-white",
-          "enabled:dark:hover:bg-white/10",
+          "dark:hover:bg-white/10",
         ],
       },
       {

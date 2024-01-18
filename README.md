@@ -8,10 +8,6 @@ Deployed to Vercel & PlanetScale
 
 [aguirrealvaro.dev](https://aguirrealvaro.dev)
 
-### To Do:
-
-- `enabled:` issue
-
 ### Posts:
 
 - react query
