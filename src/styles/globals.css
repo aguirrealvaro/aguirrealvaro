@@ -41,4 +41,7 @@
   ::after {
     @apply border-border-primary;
   }
+  button {
+    @apply cursor-default;
+  }
 }
