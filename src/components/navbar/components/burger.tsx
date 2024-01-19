@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
+import { Slot } from "@radix-ui/react-slot";
 import { Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { IconButton, Link } from "@/components/ui";
@@ -65,7 +66,6 @@ const Burger = ({ navbarHeight }: BurgerProps) => {
                           href={externalHref}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded px-4 py-1.5 transition hover:bg-hover-primary"
                         >
                           {name}
                         </Link>
@@ -74,10 +74,7 @@ const Burger = ({ navbarHeight }: BurgerProps) => {
                       const { name, href } = link;
 
                       return (
-                        <button
-                          onClick={() => handleClick(href)}
-                          className="cursor-pointer rounded px-4 py-1.5 transition hover:bg-hover-primary"
-                        >
+                        <button onClick={() => handleClick(href)} className="cursor-pointer">
                           {name}
                         </button>
                       );
@@ -86,7 +83,9 @@ const Burger = ({ navbarHeight }: BurgerProps) => {
 
                   return (
                     <li key={index} className="text-center">
-                      {renderLink()}
+                      <Slot className="rounded px-4 py-1.5 transition hover:bg-hover-primary">
+                        {renderLink()}
+                      </Slot>
                     </li>
                   );
                 })}

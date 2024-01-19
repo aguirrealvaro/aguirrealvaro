@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Slot } from "@radix-ui/react-slot";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Link as ExternalLink } from "@/components/ui";
@@ -47,15 +48,6 @@ const MainMenu = () => {
         {NAVIGATION_LINKS.map((link, index) => {
           const isActive = pathname === link.href;
 
-          const commonProps = {
-            onMouseEnter: () => setActiveElement(index),
-            ref: (el: HTMLAnchorElement | null) => {
-              if (el) {
-                linksRef.current[index] = el;
-              }
-            },
-          };
-
           const renderLink = () => {
             if (getIsExternalLink(link)) {
               const { name, externalHref } = link;
@@ -67,20 +59,13 @@ const MainMenu = () => {
                   href={externalHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 transition"
-                  {...commonProps}
                 >
                   {name}
                 </ExternalLink>
               );
             } else {
               const { name, href } = link;
-
-              return (
-                <Link href={href} className="px-4 py-2 transition" {...commonProps}>
-                  {name}
-                </Link>
-              );
+              return <Link href={href}>{name}</Link>;
             }
           };
 
@@ -92,7 +77,17 @@ const MainMenu = () => {
                 isActive ? "border-text-primary text-text-heading" : ""
               )}
             >
-              {renderLink()}
+              <Slot
+                className="px-4 py-2 transition"
+                onMouseEnter={() => setActiveElement(index)}
+                ref={(el: HTMLAnchorElement | null) => {
+                  if (el) {
+                    linksRef.current[index] = el;
+                  }
+                }}
+              >
+                {renderLink()}
+              </Slot>
             </li>
           );
         })}
