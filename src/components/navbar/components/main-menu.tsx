@@ -67,7 +67,7 @@ const MainMenu = () => {
                   href={externalHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="-mb-0.5 px-4 py-2 transition"
+                  className="px-4 py-2 transition"
                   {...commonProps}
                 >
                   {name}
@@ -77,14 +77,7 @@ const MainMenu = () => {
               const { name, href } = link;
 
               return (
-                <Link
-                  href={href}
-                  className={cn(
-                    "-mb-0.5 px-4 py-2 transition",
-                    isActive ? "text-text-heading" : ""
-                  )}
-                  {...commonProps}
-                >
+                <Link href={href} className="px-4 py-2 transition" {...commonProps}>
                   {name}
                 </Link>
               );
@@ -95,8 +88,8 @@ const MainMenu = () => {
             <li
               key={index}
               className={cn(
-                "flex h-full items-center border-b-2 border-transparent",
-                isActive ? "border-text-primary" : ""
+                "flex h-full items-center border-b-2 border-transparent -mb-0.5",
+                isActive ? "border-text-primary text-text-heading" : ""
               )}
             >
               {renderLink()}

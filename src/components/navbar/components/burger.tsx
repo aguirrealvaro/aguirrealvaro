@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Menu, X } from "lucide-react";
@@ -78,7 +76,7 @@ const Burger = ({ navbarHeight }: BurgerProps) => {
                       return (
                         <button
                           onClick={() => handleClick(href)}
-                          className="rounded px-4 py-1.5 transition hover:bg-hover-primary"
+                          className="cursor-pointer rounded px-4 py-1.5 transition hover:bg-hover-primary"
                         >
                           {name}
                         </button>

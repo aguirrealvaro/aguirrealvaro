@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="flex h-full items-center justify-between">
           <Logo />
           <MainMenu />
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <MediaLinks />
             <ThemeToggle />
             <Burger navbarHeight={navbarHeight} />
