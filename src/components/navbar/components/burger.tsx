@@ -45,9 +45,9 @@ const Burger = ({ navbarHeight }: BurgerProps) => {
           <Dialog.Content
             style={{ top: `${navbarHeight}px` }}
             className={cn(
-              "flex items-center justify-center z-navbar",
+              "z-navbar flex items-center justify-center",
               "fixed inset-x-0 bottom-0 bg-bg-secondary",
-              "data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out"
+              "data-[state=closed]:animate-fade-out data-[state=open]:animate-fade-in"
             )}
             onInteractOutside={(e) => e.preventDefault()}
           >

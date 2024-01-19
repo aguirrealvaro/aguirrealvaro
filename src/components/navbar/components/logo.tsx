@@ -37,7 +37,7 @@ const Logo = () => {
             <ContextMenu.Item
               onSelect={() => router.push("/")}
               className={cn(
-                "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
+                "flex select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
                 "cursor-pointer"
               )}
             >
@@ -47,7 +47,8 @@ const Logo = () => {
             <ContextMenu.Item
               onSelect={copySvg}
               className={cn(
-                "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary"
+                "flex select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
+                "cursor-default"
               )}
             >
               <Copy size={16} />
@@ -61,7 +62,7 @@ const Logo = () => {
           <ContextMenu.Item
             onSelect={openUiKit}
             className={cn(
-              "flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
+              "flex select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
               "cursor-pointer"
             )}
           >

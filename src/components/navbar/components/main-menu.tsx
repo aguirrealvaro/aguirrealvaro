@@ -73,7 +73,7 @@ const MainMenu = () => {
             <li
               key={index}
               className={cn(
-                "flex h-full items-center border-b-2 border-transparent -mb-0.5",
+                "-mb-0.5 flex h-full items-center border-b-2 border-transparent",
                 isActive ? "border-text-primary text-text-heading" : ""
               )}
             >
