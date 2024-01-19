@@ -23,7 +23,7 @@ const Home = () => {
             <Skills />
           </section>
           <section>
-            <Typography.H3 className="mb-2">Posts</Typography.H3>
+            <Typography.H3 className="mb-4">Posts</Typography.H3>
             <PostsList />
           </section>
         </div>

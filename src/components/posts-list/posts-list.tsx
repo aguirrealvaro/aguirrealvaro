@@ -32,8 +32,8 @@ const PostsList = async () => {
         if (process.env.NODE_ENV === "production" && !enabled) return null;
 
         return (
-          <li key={slug} className="group border-b last:border-b-0">
-            <Link href={`/blog/${slug}`} className="flex flex-col py-4 transition">
+          <li key={slug} className="group border-b py-4 first:pt-0 last:border-b-0 last:pb-0">
+            <Link href={`/blog/${slug}`} className="flex flex-col transition">
               <h2 className="font-medium text-text-heading group-hover:underline">{title}</h2>
               <span className="text-text-secondary">
                 <time dateTime={dateString}>{formattedDate}</time>
