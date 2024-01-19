@@ -27,10 +27,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(
-          "bg-bg-primary text-text-primary antialiased",
-          `${raleway.variable} font-body`
-        )}
+        className={cn("bg-bg-primary text-text-primary antialiased", `${raleway.className}`)}
       >
         <ErrorBoundary>
           <ThemeProvider>
