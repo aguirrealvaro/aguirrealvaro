@@ -1,5 +1,6 @@
+import { Suspense } from "react";
 import { ContactButtons, IntroductionText, ProfilePicture, Skills } from "./components";
-import { PageContainer, PostsList, Wrapper } from "@/components";
+import { PageContainer, PostsList, PostsListSkeleton, Wrapper } from "@/components";
 import { Typography } from "@/components/ui";
 
 const Home = () => {
@@ -24,7 +25,9 @@ const Home = () => {
           </section>
           <section>
             <Typography.H3 className="mb-4">Posts</Typography.H3>
-            <PostsList />
+            <Suspense fallback={<PostsListSkeleton />}>
+              <PostsList />
+            </Suspense>
           </section>
         </div>
       </Wrapper>

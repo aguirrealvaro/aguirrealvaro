@@ -1,4 +1,5 @@
-import { PageContainer, Wrapper, PostsList } from "@/components";
+import { Suspense } from "react";
+import { PageContainer, Wrapper, PostsList, PostsListSkeleton } from "@/components";
 import { Typography } from "@/components/ui";
 
 const Blog = () => {
@@ -6,7 +7,9 @@ const Blog = () => {
     <PageContainer>
       <Wrapper>
         <Typography.H3 className="mb-4">Blog</Typography.H3>
-        <PostsList />
+        <Suspense fallback={<PostsListSkeleton />}>
+          <PostsList />
+        </Suspense>
       </Wrapper>
     </PageContainer>
   );
