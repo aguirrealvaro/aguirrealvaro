@@ -21,7 +21,7 @@ const IntroductionText = () => {
         technologies. Among my skills, <Bold>React</Bold>,{" "}
         <Bold>
           <Link href="https://nextjs.org/" colorScheme="neutral">
-            NextJS
+            Next
           </Link>
         </Bold>{" "}
         and <Bold>TypeScript</Bold> stand out as my primary areas of interest.
