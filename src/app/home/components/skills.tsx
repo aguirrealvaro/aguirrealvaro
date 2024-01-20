@@ -8,6 +8,7 @@ const skills = [
   "CSS-in-JS",
   "Tailwind",
   "React Testing Library",
+  "Radix",
   "Git",
   "NodeJS",
   "Express",
