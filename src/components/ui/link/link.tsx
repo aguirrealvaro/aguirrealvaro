@@ -5,7 +5,7 @@ import { cva } from "class-variance-authority";
 import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/cn";
 
-const getLinkVariants = cva(undefined, {
+const getLinkVariants = cva("inline-flex cursor-pointer items-center gap-1", {
   variants: {
     colorScheme: {
       neutral: "text-text-primary",
@@ -35,10 +35,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   ({ children, underline, colorScheme, showIcon = true, className, ...restProps }, ref) => {
     return (
       <a
-        className={cn(
-          getLinkVariants({ underline, colorScheme, className }),
-          "inline-flex items-center gap-1"
-        )}
+        className={cn(getLinkVariants({ underline, colorScheme, className }))}
         ref={ref}
         target="_blank"
         rel="noopener noreferrer"

@@ -1,4 +1,4 @@
-import { Typography } from "@/components/ui";
+import { Link, Typography } from "@/components/ui";
 const { Paragraph, Bold } = Typography;
 
 const IntroductionText = () => {
@@ -18,8 +18,13 @@ const IntroductionText = () => {
       </Paragraph>
       <Paragraph>
         I am always willing to learn and stay up-to-date with the latest trends and
-        technologies. Among my skills, <Bold>React</Bold>, <Bold>Next</Bold> and{" "}
-        <Bold>TypeScript</Bold> stand out as my primary areas of interest.
+        technologies. Among my skills, <Bold>React</Bold>,{" "}
+        <Bold>
+          <Link href="https://nextjs.org/" colorScheme="neutral">
+            NextJS
+          </Link>
+        </Bold>{" "}
+        and <Bold>TypeScript</Bold> stand out as my primary areas of interest.
       </Paragraph>
       <Paragraph>
         I learn a lot from the community, and my goal is to reciprocate the same here. I&apos;

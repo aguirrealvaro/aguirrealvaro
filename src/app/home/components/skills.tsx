@@ -6,13 +6,13 @@ const skills = [
   "NextJS",
   "React Query",
   "CSS-in-JS",
-  "Tailwind",
+  "TailwindCSS",
   "React Testing Library",
   "Radix",
   "Git",
   "NodeJS",
   "Express",
-  "Nest",
+  "NestJS",
 ];
 
 const Skills = () => {
