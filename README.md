@@ -11,7 +11,7 @@ Deployed to Vercel & PlanetScale
 ### Posts:
 
 - z index
+- filter undefined from array with type safety
 - react query
 - stack
-- filter undefined from array with type safety
 - precommit + lint staged with tsc + lint
