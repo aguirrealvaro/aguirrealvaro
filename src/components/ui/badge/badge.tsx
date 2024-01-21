@@ -8,12 +8,18 @@ const getIconButtonVariants = cva(
   {
     variants: {
       variant: {
-        light: "bg-neutral-200 text-neutral-700",
-        dark: "bg-neutral-700 text-neutral-200",
+        primary: [
+          "bg-neutral-700 text-neutral-200",
+          "dark:bg-neutral-200 dark:text-neutral-700",
+        ],
+        secondary: [
+          "bg-neutral-200 text-neutral-700",
+          "dark:bg-neutral-700 dark:text-neutral-200",
+        ],
       },
     },
     defaultVariants: {
-      variant: "light",
+      variant: "primary",
     },
   }
 );

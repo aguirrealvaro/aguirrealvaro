@@ -21,7 +21,11 @@ const Skills = () => {
       <Typography.H3 className="mb-4">Skills</Typography.H3>
       <div className="flex flex-wrap items-center gap-2">
         {skills.map((skill) => {
-          return <Badge key={skill}>{skill}</Badge>;
+          return (
+            <Badge key={skill} variant="secondary">
+              {skill}
+            </Badge>
+          );
         })}
       </div>
     </div>

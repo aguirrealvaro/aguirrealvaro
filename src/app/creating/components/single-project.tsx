@@ -33,7 +33,11 @@ const SingleProject = ({
       <Typography.H4 className="mb-2">{title}</Typography.H4>
       <div className="mb-2 flex gap-2">
         {technologies.map((technology) => {
-          return <Badge key={technology}>{technology}</Badge>;
+          return (
+            <Badge key={technology} variant="secondary">
+              {technology}
+            </Badge>
+          );
         })}
       </div>
       <Typography.Paragraph className="mb-4 text-text-secondary">
