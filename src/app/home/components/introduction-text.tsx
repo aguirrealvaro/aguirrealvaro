@@ -1,4 +1,4 @@
-import { Link, Typography } from "@/components/ui";
+import { Typography } from "@/components/ui";
 const { Paragraph, Bold } = Typography;
 
 const IntroductionText = () => {
