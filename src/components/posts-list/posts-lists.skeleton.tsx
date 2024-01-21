@@ -5,7 +5,7 @@ const PostsListSkeleton = () => {
   return (
     <div className="flex flex-col gap-6">
       {allPosts.map((post) => {
-        return <Skeleton key={post._id} className="h-8 w-1/2 md:w-full" />;
+        return <Skeleton key={post._id} className="h-8 w-full" />;
       })}
     </div>
   );
