@@ -1,5 +1,5 @@
 import * as ContextMenu from "@radix-ui/react-context-menu";
-import { Component, Copy, HomeIcon } from "lucide-react";
+import { Component, Copy, HomeIcon, Terminal } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Svg } from ".";
@@ -12,8 +12,8 @@ const Logo = () => {
     navigator.clipboard.writeText("wip :)");
   };
 
-  const openUiKit = () => {
-    window.open("https://ui-kit7.vercel.app", "_blank");
+  const openUiKit = (url: string) => {
+    window.open(url, "_blank");
   };
 
   return (
@@ -60,14 +60,24 @@ const Logo = () => {
             Projects
           </ContextMenu.Label>
           <ContextMenu.Item
-            onSelect={openUiKit}
+            onSelect={() => openUiKit("https://template.aguirrealvaro.dev")}
+            className={cn(
+              "flex select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
+              "cursor-pointer"
+            )}
+          >
+            <Terminal size={16} />
+            next-aa-app
+          </ContextMenu.Item>
+          <ContextMenu.Item
+            onSelect={() => openUiKit("https://ui-kit7.vercel.app")}
             className={cn(
               "flex select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-hover-primary",
               "cursor-pointer"
             )}
           >
             <Component size={16} />
-            UI Kit
+            ui
           </ContextMenu.Item>
         </ContextMenu.Content>
       </ContextMenu.Portal>
