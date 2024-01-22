@@ -1,15 +1,10 @@
 import "@/styles/globals.css";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { raleway } from "./fonts";
 import { Navbar, Footer, ErrorBoundary } from "@/components";
 import { cn } from "@/lib/cn";
 import { ThemeProvider } from "@/providers";
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  variable: "--font-raleway",
-});
 
 export const metadata: Metadata = {
   title: "Alvaro Aguirre",
@@ -27,7 +22,10 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn("bg-bg-primary text-text-primary antialiased", `${raleway.className}`)}
+        className={cn(
+          "bg-bg-primary text-text-primary antialiased",
+          `${raleway.variable} font-body`
+        )}
       >
         <ErrorBoundary>
           <ThemeProvider>
