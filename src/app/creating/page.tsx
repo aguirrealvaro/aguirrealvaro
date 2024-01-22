@@ -13,7 +13,7 @@ const Creating = () => {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-1 md:gap-14">
           <SingleProject
             title="ui"
-            description="Typical components of a design system out of the box such as Dialog, Alert, Accordion, Button, etc."
+            description="Typical components of a design system out of the box such as Dialog, Alert, Accordion, Button, etc. With customization and accesibility."
             image="/components.webp"
             projectLink="https://ui-kit7.vercel.app"
             codeLink="https://github.com/aguirrealvaro/ui-kit"
@@ -31,7 +31,7 @@ const Creating = () => {
           />
           <SingleProject
             title="next-aa-app"
-            description="NextJS boilerplate with Tailwind, Typescript, Dark Mode, ESLint, Prettier, Precommit and more."
+            description="NextJS boilerplate with Tailwind, Typescript, Dark Mode, ESLint, Prettier, Pre commit and more..."
             image="/terminal2.png"
             projectLink="https://template.aguirrealvaro.dev/"
             codeLink="https://github.com/aguirrealvaro/next-aa-app"
