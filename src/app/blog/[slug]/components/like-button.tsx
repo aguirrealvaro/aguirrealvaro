@@ -9,14 +9,11 @@ const LikeButton = async ({ slug }: LikeButtonProps) => {
   const sessionId = await getSession();
   const isLiked = await getIsLiked(slug, sessionId);
 
-  const handleLikePost = async () => {
-    "use server";
-    await likePost(slug, sessionId);
-  };
+  const likePostWithParams = likePost.bind(null, slug, sessionId);
 
   return (
     <div className="relative z-heart-like inline-flex">
-      <form action={handleLikePost}>
+      <form action={likePostWithParams}>
         <LikeButtonClient isLiked={isLiked} />
       </form>
     </div>

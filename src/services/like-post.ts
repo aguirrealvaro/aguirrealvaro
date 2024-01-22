@@ -2,6 +2,7 @@ import { revalidatePath } from "next/cache";
 import prisma from "@/lib/prisma";
 
 export const likePost = async (slug: string, sessionId: string) => {
+  "use server";
   const post = await prisma.post.update({
     where: { slug },
     // TO DO: remove this ugly solution, and find another approach
