@@ -1,4 +1,4 @@
-import { getIncrementedPost } from "@/services";
+import { getIncrementedPost } from "@/services/get-incremented-post";
 
 type MetricsProps = {
   slug: string;

@@ -1,5 +1,7 @@
 import { LikeButtonClient } from "./like-button.client";
-import { getIsLiked, getSession, likePost } from "@/services";
+import { getIsLiked } from "@/services/get-is-liked";
+import { getSession } from "@/services/get-session";
+import { likePost } from "@/services/like-post";
 
 type LikeButtonProps = {
   slug: string;

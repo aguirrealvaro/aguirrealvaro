@@ -1,16 +1,7 @@
 import Link from "next/link";
-import prisma from "@/lib/prisma";
-import type { PostWithLikes } from "@/types";
+import { getPosts } from "@/services/get-posts";
 import { formatDate } from "@/utils/format-date";
 import { allPosts } from "contentlayer/generated";
-
-const getPosts = async (): Promise<PostWithLikes[]> => {
-  const posts = await prisma.post.findMany({
-    include: { likes: true },
-  });
-
-  return posts;
-};
 
 const PostsList = async () => {
   const sortedPosts = allPosts.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));

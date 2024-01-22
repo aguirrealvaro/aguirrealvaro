@@ -27,7 +27,7 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
         <Typography.H2 className="mb-1">{title}</Typography.H2>
         <p className="text-text-secondary">{description}</p>
       </div>
-      <Suspense fallback={<Skeleton className="h-4 w-6" />}>
+      <Suspense fallback={<Skeleton className="h-6 w-6" />}>
         <LikeButton slug={slug} />
       </Suspense>
     </div>
