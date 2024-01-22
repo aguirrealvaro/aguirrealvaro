@@ -1,3 +1,4 @@
+import type { ClassValue } from "clsx";
 import Image from "next/image";
 import { Badge, Button, Typography } from "@/components/ui";
 import { cn } from "@/lib/cn";
@@ -8,7 +9,7 @@ type SingleProjectProps = {
   image: string;
   projectLink: string;
   codeLink: string;
-  imgClassname?: string;
+  imgClassname?: ClassValue;
   technologies: string[];
 };
 
