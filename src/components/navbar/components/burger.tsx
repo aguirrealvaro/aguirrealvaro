@@ -73,11 +73,7 @@ const Burger = ({ navbarHeight }: BurgerProps) => {
                     } else {
                       const { name, href } = link;
 
-                      return (
-                        <button onClick={() => handleClick(href)} className="cursor-pointer">
-                          {name}
-                        </button>
-                      );
+                      return <button onClick={() => handleClick(href)}>{name}</button>;
                     }
                   };
 
