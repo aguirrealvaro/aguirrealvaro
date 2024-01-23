@@ -7,6 +7,8 @@ type MetricsProps = {
 const Metrics = async ({ slug }: MetricsProps) => {
   const post = await getIncrementedPost(slug);
 
+  if (!post) return undefined;
+
   return (
     <span>
       · {post.views} views · {post.likes.length} likes

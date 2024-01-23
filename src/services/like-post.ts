@@ -3,8 +3,15 @@ import prisma from "@/lib/prisma";
 
 export const likePost = async (slug: string, sessionId: string) => {
   "use server";
-  const post = await prisma.post.update({
+
+  const post = await prisma.post.findUnique({
     where: { slug },
+  });
+
+  if (!post) return null;
+
+  const likedPost = await prisma.post.update({
+    where: { id: post.id },
     // TO DO: remove this ugly solution, and find another approach
     // EXPLANATION:
     // after liking the post, i am doing revalidatePath(`/blog/${slug}`)
@@ -19,12 +26,8 @@ export const likePost = async (slug: string, sessionId: string) => {
     data: { views: { decrement: 1 } },
   });
 
-  if (!post) {
-    throw new Error("Post does not exists");
-  }
-
   const like = await prisma.likes.findFirst({
-    where: { sessionId: sessionId, postId: post.id },
+    where: { sessionId: sessionId, postId: likedPost.id },
   });
 
   if (like) {
