@@ -1,0 +1,61 @@
+---
+title: Filter falsy values from an array with type safety
+description: Using flatMap or ts-reset to remove falsy values from array with type safety
+publishedAt: 2024-06-23
+enabled: true
+---
+
+### Using flatMap
+
+If we have
+
+```js
+const array = [1, 2, undefined, 3, 4, null, 5];
+```
+
+and we want to filter the falsy values we can do
+
+```js
+const filter = array.filter(Boolean); // output: 1, 2, 3, 4, 5
+```
+
+or
+
+```js
+const filter = array.filter((item) => !!item); // output: 1, 2, 3, 4, 5
+```
+
+and that works good, but, if we are working with typescript we will see that the bad type:
+
+<Image src="/filter.png" alt="filter-picture" width={444} height={67} />
+
+To fix it, we can the array method `flatMap`: is the combination of a map and a flat operation
+
+```js
+const filter = array.flatMap((item) => {
+  if (!item) return [];
+  return item;
+});
+```
+
+or shorter:
+
+```js
+const filter = array.flatMap((item) => item || []); // output: 1, 2, 3, 4, 5
+```
+
+and the type is
+
+<Image src="/filter2.png" alt="filter2-picture" width={439} height={82} />
+
+---
+
+### Using ts-reset
+
+[ts-reset](https://www.totaltypescript.com/ts-reset) offers extremely strict TypeScript:
+
+Using the first example would work
+
+```js
+const filter = array.filter(Boolean); // output: 1, 2, 3, 4, 5
+```
