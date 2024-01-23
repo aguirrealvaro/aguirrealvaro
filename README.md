@@ -10,7 +10,6 @@ Deployed to Vercel & PlanetScale
 
 ### Posts:
 
-- z index
 - filter undefined from array with type safety
 - react query
 - stack

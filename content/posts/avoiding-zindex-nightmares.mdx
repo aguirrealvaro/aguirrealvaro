@@ -1,0 +1,46 @@
+---
+title: Avoiding z-index Nightmares
+description: An easy and scalable way to manage z-index
+publishedAt: 2024-01-23
+enabled: true
+---
+
+Throughout my career, in the projects where I've worked, I have never seen an effective way to handle the setting of z-index. It's not uncommon to see z-index: 9999, and it could even be higher, becoming very unscalable.
+
+An effective way to handle z-index and keep them organized to ensure scalability is to store the values of each element to which we assign a z-index in one central place. It could be an object, but in this case, I will be storing them as CSS Variables.
+
+```css title="globals.css"
+:root {
+  --z-index-navbar: 1;
+  --z-index-modal: 2;
+  --z-index-tooltip: 3;
+  --z-index-context-menu: 4;
+  --z-index-other-element: 5;
+}
+```
+
+Then, in each element where we want to assign one of these values, we'll simply do
+
+```css title="index.css"
+.navbar {
+  z-index: var(--z-index-navbar);
+}
+
+.modal {
+  z-index: var(--z-index-modal);
+}
+
+.tooltip {
+  z-index: var(--z-index-tooltip);
+}
+
+.context-menu {
+  z-index: var(--z-index-context-menu);
+}
+
+.other-element {
+  z-index: var(--z-index-other-element);
+}
+```
+
+This way, whenever we need to assign a z-index, it would be enough to refer to these variables to know which element will have a higher priority to be above another.
