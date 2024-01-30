@@ -14,7 +14,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/consistent-type-imports": [
-      "error",
+      "warn",
       {
         fixStyle: "inline-type-imports",
       },
