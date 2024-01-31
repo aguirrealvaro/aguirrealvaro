@@ -13,3 +13,4 @@ Deployed to Vercel & PlanetScale
 - react query
 - stack
 - precommit + lint staged with tsc + lint
+- how i use tailwind
