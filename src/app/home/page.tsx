@@ -9,7 +9,7 @@ const Home = () => {
       <Wrapper>
         <div className="flex flex-col gap-16">
           <section>
-            <Typography.H3 className="mb-12">Alvaro Aguirre Fulano</Typography.H3>
+            <Typography.H3 className="mb-4">Alvaro Aguirre</Typography.H3>
             <div className="flex justify-between gap-10 sm:flex-col">
               <div className="flex-2">
                 <IntroductionText />
