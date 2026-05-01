@@ -3,9 +3,8 @@ import prisma from "@/lib/prisma";
 
 export const likePost = async (slug: string, sessionId: string) => {
   "use server";
-  const post = await prisma.post.update({
+  const post = await prisma.post.findUnique({
     where: { slug },
-    data: { views: { decrement: 1 } },
   });
 
   if (!post) {
@@ -29,6 +28,5 @@ export const likePost = async (slug: string, sessionId: string) => {
     });
   }
 
-  // first time is not working, then it works... why?
   revalidateTag("post");
 };
