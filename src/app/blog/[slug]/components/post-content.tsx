@@ -25,7 +25,7 @@ const components = {
   //code: (props: any) => <Typography.Code {...props} />,
   a: (props: any) => <Link {...props} />,
   Image: (props: ImageProps) => (
-    <div className="mb-4 flex justify-center">
+    <div className="mb-4">
       <Image {...props} />
     </div>
   ),

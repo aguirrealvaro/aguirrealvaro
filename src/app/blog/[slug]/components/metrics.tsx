@@ -9,6 +9,8 @@ const Metrics = async ({ slug }: MetricsProps) => {
   await incrementView(slug);
   const post = await getPost(slug);
 
+  if (!post) return undefined;
+
   return (
     <span>
       · {post.views} views · {post.likes.length} likes

@@ -3,9 +3,7 @@ import prisma from "@/lib/prisma";
 export const getIsLiked = async (slug: string, sessionId: string): Promise<boolean> => {
   const post = await prisma.post.findUnique({ where: { slug } });
 
-  if (!post) {
-    throw new Error("Post does not exists");
-  }
+  if (!post) return false;
 
   const likes = await prisma.likes.findMany({
     where: { postId: post.id, sessionId: sessionId },
