@@ -30,10 +30,10 @@ const Creating = () => {
             technologies={["Next", "RSC", "Server Actions", "Prisma", "MDX"]}
           />
           <SingleProject
-            title="next-aa-app"
+            title="next-template"
             description="NextJS boilerplate with Tailwind, Typescript, Dark Mode, ESLint, Prettier, Pre commit and more..."
             image="/terminal2.png"
-            projectLink="https://template.aguirrealvaro.dev/"
+            projectLink="https://next-template.aguirrealvaro.dev/"
             codeLink="https://github.com/aguirrealvaro/next-aa-app"
             imgClassname="object-contain bg-black"
             technologies={["Next", "CFG"]}
