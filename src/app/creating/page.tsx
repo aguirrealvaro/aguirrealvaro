@@ -18,7 +18,7 @@ const Creating = () => {
             projectLink="https://tanstack-chat.aguirrealvaro.dev/"
             codeLink="https://github.com/aguirrealvaro/tanstack-chat"
             imgClassname="object-cover"
-            technologies={["React", "Tanstack", "Tailwind", "Shadcn", "Prisma"]}
+            technologies={["React", "Tanstack", "Tailwind", "Shadcn", "Prisma", "Clerk auth"]}
           />
           <SingleProject
             title="ui"
