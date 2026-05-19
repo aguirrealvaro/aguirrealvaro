@@ -12,6 +12,15 @@ const Creating = () => {
         </span>
         <div className="grid grid-cols-2 gap-10 md:grid-cols-1 md:gap-14">
           <SingleProject
+            title="tanstack-chat"
+            description="Whatsapp clone"
+            image="/chat.webp"
+            projectLink="https://tanstack-chat.aguirrealvaro.dev/"
+            codeLink="https://github.com/aguirrealvaro/tanstack-chat"
+            imgClassname="object-cover"
+            technologies={["React", "Tanstack", "Tailwind", "Shadcn", "Prisma"]}
+          />
+          <SingleProject
             title="ui"
             description="Typical components of a design system out of the box such as Dialog, Alert, Accordion, Button, etc. With customization and accesibility."
             image="/components.webp"
