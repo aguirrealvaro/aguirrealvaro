@@ -15,7 +15,7 @@ const Creating = () => {
             title="tanstack-chat"
             description="Whatsapp clone"
             image="/chat.webp"
-            projectLink="https://tanstack-chat.aguirrealvaro.dev/"
+            projectLink="https://chat.aguirrealvaro.dev/"
             codeLink="https://github.com/aguirrealvaro/tanstack-chat"
             imgClassname="object-cover"
             technologies={["React", "Tanstack", "Tailwind", "Shadcn", "Prisma", "Clerk auth"]}
