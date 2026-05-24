@@ -1,11 +1,13 @@
-import { getIncrementedPost } from "@/services/get-incremented-post";
+import { getPost } from "@/services/get-post";
+import { incrementView } from "@/services/increment-view";
 
 type MetricsProps = {
   slug: string;
 };
 
 const Metrics = async ({ slug }: MetricsProps) => {
-  const post = await getIncrementedPost(slug);
+  await incrementView(slug);
+  const post = await getPost(slug);
 
   if (!post) return undefined;
 
