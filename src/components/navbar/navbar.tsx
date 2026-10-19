@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { MainMenu, ThemeToggle, MediaLinks, Logo, Burger } from "./components";
-import { Wrapper } from "@/components";
+import { Wrapper } from "@/components/wrapper";
 import { cn } from "@/lib/cn";
 
 const Navbar = () => {

@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import React from "react";
 import { ErrorBoundary as ErrorBoundaryComponent } from "react-error-boundary";
-import { Wrapper } from "@/components";
+import { Wrapper } from "@/components/wrapper";
 
 type ErrorFallbackProps = {
   error: Error;

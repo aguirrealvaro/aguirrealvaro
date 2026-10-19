@@ -1,4 +1,4 @@
-import { Wrapper } from "@/components";
+import { Wrapper } from "@/components/wrapper";
 
 const Footer = () => {
   return (
