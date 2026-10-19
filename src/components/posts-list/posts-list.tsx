@@ -17,7 +17,9 @@ const PostsList = async () => {
 
         const renderMetrics = () => {
           if (!relatedPost) return null;
-          return ` · ${relatedPost?.views} views · ${relatedPost?.likes.length} likes`;
+          const likesCount = relatedPost.likes.length;
+          const likesLabel = likesCount === 1 ? "like" : "likes";
+          return ` · ${relatedPost.views} views · ${likesCount} ${likesLabel}`;
         };
 
         if (process.env.NODE_ENV === "production" && !enabled) return null;

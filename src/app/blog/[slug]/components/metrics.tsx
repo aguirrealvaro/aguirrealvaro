@@ -9,9 +9,12 @@ const Metrics = async ({ slug }: MetricsProps) => {
 
   if (!post) return undefined;
 
+  const likesCount = post.likes.length;
+  const likesLabel = likesCount === 1 ? "like" : "likes";
+
   return (
     <span>
-      · {post.views} views · {post.likes.length} likes
+      · {post.views} views · {likesCount} {likesLabel}
     </span>
   );
 };
