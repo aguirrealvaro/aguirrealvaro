@@ -15,7 +15,7 @@ const ErrorFallback = ({ error }: ErrorFallbackProps) => {
       <Wrapper>
         <div role="alert">
           <p>Something went wrong:</p>
-          <pre className="text-red-500">{error.message}</pre>
+          <pre className="whitespace-pre-wrap break-words text-red-500">{error.message}</pre>
         </div>
       </Wrapper>
     </div>
