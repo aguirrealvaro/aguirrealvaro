@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { LikeButton } from "./like-button";
 import { Metrics } from "./metrics";
+import { ViewTracker } from "./view-tracker";
 import { Typography } from "@/components/ui";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDate } from "@/utils/format-date";
@@ -17,6 +18,7 @@ const PostHeader = async ({ slug, title, publishedAt, description }: PostHeaderP
 
   return (
     <div className="mb-8 flex items-center justify-between">
+      <ViewTracker slug={slug} />
       <div className="mr-4">
         <span className="flex items-center gap-2 text-text-secondary">
           <time dateTime={dateString}>{formattedDate}</time>
