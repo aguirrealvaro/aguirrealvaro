@@ -12,6 +12,14 @@ const Creating = () => {
         </span>
         <div className="grid grid-cols-2 gap-10 md:grid-cols-1 md:gap-14">
           <SingleProject
+            title="lunero"
+            description="Search movies, series and anime, and stream their torrents right in the browser, with Spanish subtitles."
+            image="/lunero.svg"
+            projectLink="https://www.lunerotv.com/"
+            imgClassname="object-contain bg-black p-10"
+            technologies={["React", "Tanstack", "Tailwind", "TMDB", "TorBox"]}
+          />
+          <SingleProject
             title="tanstack-chat"
             description="Whatsapp clone"
             image="/chat.webp"

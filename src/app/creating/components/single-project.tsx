@@ -8,7 +8,7 @@ type SingleProjectProps = {
   description: string;
   image: string;
   projectLink: string;
-  codeLink: string;
+  codeLink?: string;
   imgClassname?: ClassValue;
   technologies: string[];
 };
@@ -50,11 +50,13 @@ const SingleProject = ({
             View Project
           </a>
         </Button>
-        <Button variant="outlined" asChild>
-          <a href={codeLink} target="_blank" rel="noopener noreferrer">
-            View Source Code
-          </a>
-        </Button>
+        {codeLink && (
+          <Button variant="outlined" asChild>
+            <a href={codeLink} target="_blank" rel="noopener noreferrer">
+              View Source Code
+            </a>
+          </Button>
+        )}
       </div>
     </div>
   );
