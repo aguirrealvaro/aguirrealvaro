@@ -17,12 +17,12 @@ const Creating = () => {
             image="/lunero.svg"
             projectLink="https://www.lunerotv.com/"
             imgClassname="object-contain bg-black p-10"
-            technologies={["React", "Tanstack", "Tailwind", "TMDB", "TorBox"]}
+            technologies={["React", "Tanstack", "Tailwind", "Shadcn", "Torrent"]}
           />
           <SingleProject
             title="tanstack-chat"
             description="Whatsapp clone"
-            image="/chat.webp"
+            image="/tanstack-chat.svg"
             projectLink="https://chat.aguirrealvaro.dev/"
             codeLink="https://github.com/aguirrealvaro/tanstack-chat"
             imgClassname="object-cover"
