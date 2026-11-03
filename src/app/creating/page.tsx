@@ -30,7 +30,7 @@ const Creating = () => {
           />
           <SingleProject
             title="ui"
-            description="Typical components of a design system out of the box such as Dialog, Alert, Accordion, Button, etc. With customization and accesibility."
+            description="A design system built from scratch, without component libraries: Dialog, Alert, Accordion, Button and more, all customizable and accessible."
             image="/ui-kit.svg"
             projectLink="https://ui-kit7.vercel.app"
             codeLink="https://github.com/aguirrealvaro/ui-kit"
