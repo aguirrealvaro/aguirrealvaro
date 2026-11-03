@@ -13,7 +13,7 @@ const Creating = () => {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-1 md:gap-14">
           <SingleProject
             title="lunero"
-            description="Search movies, series and anime, and stream their torrents right in the browser, with Spanish subtitles."
+            description="Search movies, series and anime, and stream their torrents right in the browser, with subtitles."
             image="/lunero.svg"
             projectLink="https://www.lunerotv.com/"
             imgClassname="object-contain bg-black p-10"
