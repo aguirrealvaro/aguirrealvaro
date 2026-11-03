@@ -31,7 +31,7 @@ const Creating = () => {
           <SingleProject
             title="ui"
             description="Typical components of a design system out of the box such as Dialog, Alert, Accordion, Button, etc. With customization and accesibility."
-            image="/components.webp"
+            image="/ui-kit.svg"
             projectLink="https://ui-kit7.vercel.app"
             codeLink="https://github.com/aguirrealvaro/ui-kit"
             imgClassname="object-cover"
